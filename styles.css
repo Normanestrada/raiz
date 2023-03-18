@@ -1,6 +1,28 @@
-
+/*esto es color encabezado*/
 h1 {
 
   color: blue;
 
+}
+
+
+
+/*Esto es para el menú vertical*/
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
 }
