@@ -10,6 +10,39 @@
 
   <!--este no muy optimizado para móvil<link rel="stylesheet" href=styles.css>-->
 
+
+  <script>
+    // Obtener todos los elementos de menú
+    var menuItems = document.querySelectorAll('nav ul li a');
+
+    // Obtener todas las secciones ocultas
+    var sections = document.querySelectorAll('.hidden');
+
+    // Agregar eventos de clic a cada elemento de menú
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].addEventListener('click', function(e) {
+        e.preventDefault(); // Prevenir que se redireccione a otra página
+        var targetSectionId = this.getAttribute('href').slice(1); // Obtener el id de la sección a mostrar
+        showSection(targetSectionId); // Mostrar la sección correspondiente
+      });
+    }
+
+    // Función para mostrar la sección correspondiente y ocultar las demás
+    function showSection(sectionId) {
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getAttribute('id') === sectionId) {
+          sections[i].classList.remove('hidden');
+        } else {
+          sections[i].classList.add('hidden');
+        }
+      }
+    }
+  </script>
+
+
+
+
+
     
 
   </head>
