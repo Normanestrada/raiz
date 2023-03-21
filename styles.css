@@ -43,6 +43,13 @@ nav a {
 }
 
 
-section#html p {
-  font-size: 10px; /* Ajusta el tamaño de la letra a tu gusto */
+
+section p {
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  section p {
+    font-size: 14px;
+  }
 }
