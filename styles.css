@@ -68,5 +68,9 @@ section#excel p {
 
 }
 
+section p {
+  height: 1.5em; /* altura fija de los párrafos */
+  line-height: 1.5em; /* altura de línea igual a la altura de los párrafos */
+}
 
 
