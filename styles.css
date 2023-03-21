@@ -43,7 +43,7 @@ nav a {
 }
 
 
-/*Estilos normales*/
+/*Estilos normales tamaño de letras secciones*/
 
 section#html p {
 
@@ -68,6 +68,9 @@ section#excel p {
 
 }
 
+
+/*Genera que todas las secciones el texto  sea parejo en altura y ancho*/
+
 section p {
   height: 1.5em; /* altura fija de los párrafos */
   line-height: 1.5em; /* altura de línea igual a la altura de los párrafos */
@@ -79,3 +82,7 @@ section p {
 }
 
 
+.elemento {
+  width: 80%; /* ajusta el ancho del elemento a tu preferencia */
+  margin: 0 auto; /* para centrar el elemento en la página */
+}
