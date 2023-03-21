@@ -53,22 +53,20 @@ section#html p {
 
 section#sql p {
 
-  font-size: 10px;
+  font-size: 13px;
 
 }
 
  section#powerbi p {
 
-  font-size: 10px;
+  font-size: 13px;
 
 }
 section#excel p {
 
-  font-size: 10px;
+  font-size: 13px;
 
 }
 
-section p {
-  max-width: 600px; /* ancho máximo del párrafo */
-  margin: 0 auto; /* centrar el párrafo */
-}
+
+
