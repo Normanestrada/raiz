@@ -41,3 +41,8 @@ nav a {
 .hidden {
   display: none;
 }
+
+
+section#html p {
+  font-size: 12px; /* Ajusta el tamaño de la letra a tu gusto */
+}
