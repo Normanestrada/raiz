@@ -47,16 +47,8 @@ nav a {
 
 section#html p {
 
-  font-size: 12px;
+  font-size: 10px;
 
 }
 
-section p {
-  font-size: 16px;
-}
-
-@media (max-width: 600px) {
-  section p {
-    font-size: 14px;
-  }
-}
+ 
