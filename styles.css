@@ -73,4 +73,9 @@ section p {
   line-height: 1.5em; /* altura de línea igual a la altura de los párrafos */
 }
 
+section p {
+  max-width: 600px; /* ancho máximo del párrafo */
+  margin: 0 auto; /* centrar el párrafo */
+}
+
 
