@@ -68,3 +68,7 @@ section#excel p {
 
 }
 
+section p {
+  max-width: 600px; /* ancho máximo del párrafo */
+  margin: 0 auto; /* centrar el párrafo */
+}
