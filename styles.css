@@ -1,4 +1,10 @@
-/*esto es color encabezado*/
+/*esto es el encabezado*/
+
+header {
+  text-align: center;
+
+}
+
 h1 {
 
   color: blue;
