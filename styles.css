@@ -88,14 +88,16 @@ section p {
 }
 
 
-
-<textarea id="codigo" style="width: 500px; height: 200px;">Texto dentro del elemento textarea</textarea>
-
 .mi-textarea {
   width: 1100px;
-  height: 900px;
+  height: 1000px;
   font-size: 16px;
   font-family: Arial, sans-serif;
+  resize: none; /* agregamos la propiedad para desactivar la redimensión */
   /* otros estilos */
 }
+
+
+
+
 
