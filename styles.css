@@ -91,4 +91,11 @@ section p {
 
 <textarea id="codigo" style="width: 500px; height: 200px;">Texto dentro del elemento textarea</textarea>
 
+.mi-textarea {
+  width: 800px;
+  height: 500px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  /* otros estilos */
+}
 
