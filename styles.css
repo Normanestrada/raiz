@@ -93,10 +93,10 @@ section p {
 
 #codigo {
   width: 350px;
-  height: 100px; 
+  height: 200px; 
   font-size: 15px;
   font-family: Arial, sans-serif;
-  border: 2px solid blue;!important;
+  border: 2px solid blue;
   resize: none; /* agregamos la propiedad para desactivar la redimensión */
   /* otros estilos */
 }
