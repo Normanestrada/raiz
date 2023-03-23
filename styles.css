@@ -131,25 +131,4 @@ ol {
   width: 80%;
 }
 
-li {
-  position: relative;
-}
-
-li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: red;
-}
-
-li::after {
-  content: ".";
-}
-
-li::after {
-  content: ";";
-}
 
