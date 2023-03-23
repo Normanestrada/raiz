@@ -132,18 +132,24 @@ ol {
 }
 
 
+
 #mysql li {
   font-size: 16px;
   line-height: 1.5;
 }
 
-#mysql li:after {
-  content: "; ";
+#mysql li::after {
+  content: "";
 }
 
-#mysql li span {
+#mysql li::before {
+  content: attr(data-before);
+  color: black;
+}
+
+#mysql li[data-before$=";"]::after {
+  content: attr(data-after);
   color: red;
 }
-
 
 
