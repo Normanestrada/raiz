@@ -107,7 +107,8 @@ section p {
   font-size: 15px;
   font-family: Arial, sans-serif;
   border: 2px solid blue;
-  pointer-events: none; /*no editable en web*/
+  pointer-events: none; /*no permite editar en web*/
+  user-select: all;    /*Permite seleccionar en web*/
   resize: none; /* agregamos la propiedad para desactivar la redimensión */
   /* otros estilos */
 }
