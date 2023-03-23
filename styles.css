@@ -137,9 +137,14 @@ ol {
   font-size: 16px;
   line-height: 1.5;
 }
+
 #mysql li::after {
-  content: "; ";
+  content: ";";
   color: red;
+}
+
+#mysql li::after + span {
+  color: black;
 }
 
 
