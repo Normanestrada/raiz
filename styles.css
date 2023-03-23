@@ -132,24 +132,19 @@ ol {
 }
 
 
-
 #mysql li {
   font-size: 16px;
   line-height: 1.5;
 }
 
 #mysql li::after {
-  content: "";
-  color: black;
-}
-
-#mysql li::after {
-  content: "; ";
+  content: ";";
   color: red;
 }
 
-#mysql li:not(:last-child)::after {
+#mysql li::after + * {
   color: red;
 }
+
 
 
