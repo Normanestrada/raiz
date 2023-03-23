@@ -102,22 +102,24 @@ section p {
 }
 
 
- #codigodos {
+
+#codigodos {
   width: 400px;
   height: 400px;
   font-size: 15px;
   font-family: Arial, sans-serif;
   border: 2px solid blue;
-  pointer-events: none; /* desactiva el clic */
   user-select: all; /* permite seleccionar el contenido */
   resize: none; /* desactiva la redimensión */
   opacity: 0.5; /* opcional: reduce la opacidad para indicar que el contenido no es editable */
+  readonly: true; /* hace que el contenido sea solo de lectura */
 }
 
 
 
-/*Tamaños de letra se sección sql*/
 
+
+/*Tamaños de letra se sección sql*/
 
 ol {
   font-size: 12px;
