@@ -114,8 +114,12 @@ section p {
 }
  
 
+/*Tamaños de letra se sección sql*/
+
+
 ol {
   font-size: 12px;
+  max-width: 600px; /* define el ancho máximo que puede tener el párrafo */
+  width: 80%; /* garantiza que el párrafo ocupe todo el ancho disponible */
 }
-
 
