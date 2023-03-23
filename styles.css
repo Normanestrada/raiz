@@ -124,6 +124,7 @@ section p {
 
 /*Tamaños de letra se sección sql*/
 
+
 ol {
   font-size: 12px;
   max-width: 600px;
@@ -134,34 +135,21 @@ li {
   position: relative;
 }
 
-li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: inherit;
-  z-index: -1;
-}
-
 li::after {
   content: "";
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
-  right: 100%;
-  width: 9999px;
-  background-color: inherit;
-  z-index: -1;
-}
-
-li span {
-  position: relative;
-  z-index: 1;
-}
-
-li:not(:last-of-type) span {
+  left: 0;
   color: red;
+}
+
+li::after {
+  content: ".";
+}
+
+li::after {
+  content: ";";
 }
 
