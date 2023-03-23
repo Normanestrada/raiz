@@ -113,7 +113,7 @@ section p {
   resize: none; /* desactiva la redimensión */
   opacity: 0.5; /* opcional: reduce la opacidad para indicar que el contenido no es editable */
   readonly: true; /* hace que el contenido sea solo de lectura */
-  pointer-events: none; /* desactiva cualquier interacción con el puntero del ratón */
+  
 }
 
   
