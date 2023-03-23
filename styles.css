@@ -139,12 +139,17 @@ ol {
 }
 
 #mysql li::after {
-  content: ";";
+  content: "";
+  color: black;
+}
+
+#mysql li::after {
+  content: "; ";
   color: red;
 }
 
-#mysql li::after + span {
-  color: black;
+#mysql li:not(:last-child)::after {
+  color: red;
 }
 
 
