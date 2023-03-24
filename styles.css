@@ -131,6 +131,8 @@ ol {
   width: 80%;
 }
 
+/*Controlador de  color rojo before punto y coma y after comillas  sección sql*/
+/* Es decir una vez termine comillas pero después de un punto y coma se marcará color rojo*/
 
 
 #mysql li {
