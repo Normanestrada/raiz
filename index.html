@@ -196,6 +196,58 @@ Codigo1 Char (5)  not null primary key identity(100,1)
 Código2 varchar (15) not null default 'no registrado
 Codigo3 varchar(16) no null default '00000000000000000);" data-after=" basica"></li>
 
+<li data-before="Create table bdvebtas(
+Codigo1 Char (5)  not null primary key identity(100,1)
+Código2 varchar (15) not null default 'no registrado
+Codigo3 varchar(16) no null check (codigo3   between 1 and 100),
+Codigo4 varchar(16) no null check (codigo4  >0),
+Codigo5 varchar(16) no null check (codigo5   in ('caja', 'bolsas, 'maletas'));" data-after=" basica"></li>
+
+<li data-before="Alter table bdvebtas
+Add Constraint chk_cualquiernombre
+check (codigo3   between 1 and 100);" data-after="añade restricción a una tabla ya existente ver anterior"></li>
+
+<li data-before="SP_helpConstraint bdvebtas;" data-after=" consulta restricciones"></li>
+
+<li data-before="Create table bdvebtas(
+Codigo1 Char (5)  not null primary key identity(100,1)
+Código2 varchar (15) not null Unique;" data-after=" basica"></li>
+
+<li data-before="Alter table bdvebtas
+Add Constraint Uni_cualquiernombre
+Unique(código2);" data-after=" añade una restricción de una tabla ya existente ver anterior"></li>
+
+<li data-before="ALTER TABLE bdvebtas
+ALTER COLUMN Codigo1 VARCHAR(5) NULL;" data-after=" modifica o cambia el tipo de dato de una tabla"></li>
+
+<li data-before="ALTER TABLE bdvebtas
+DROP CONSTRAINT PK_bdvebtas;" data-after=" elimina el tipo de dato primario"></li>
+
+<li data-before="ALTER TABLE bdvebtas
+ADD CONSTRAINT PK_bdvebtas_new PRIMARY KEY (Codigo2);" data-after=" añade primary key a una tabla existente"></li>
+
+<li data-before="CREATE TABLE OtraTabla (
+  Id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+  Nombre VARCHAR(50) NOT NULL,
+  Codigo2 VARCHAR(15) NOT NULL,
+  CONSTRAINT FK_OtraTabla_bdvebtas
+    FOREIGN KEY (Codigo2)
+    REFERENCES bdvebtas(Codigo2)
+);" data-after=" se aplica clave foránea o secundaria cuando se referencia a otra tabla existente"></li>
+
+<li data-before="ALTER TABLE OtraTabla DROP CONSTRAINT FK_OtraTabla_bdvebtas;" data-after=" eliminar tipo de dato foraneo"></li>
+
+<li data-before="ALTER TABLE TablaExistente
+ADD CONSTRAINT FK_TablaExistente_bdvebtas
+FOREIGN KEY (Codigo2)
+REFERENCES bdvebtas(Codigo2);" data-after=" aplica tipo de datos foráneo a partir de dos tablas existente"></li>
+
+<li data-before="INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');" data-after=" Ingresa o registra datos a una tabla"></li>
+
+<li data-before="INSERT INTO bdvebtas (Codigo1, Codigo2)
+VALUES ('A1234', 'Producto1'), ('B5678', 'Producto2'), ('C9101', 'Producto3');" data-after=" Ingresa o registra datos a una tabla"></li>
+
 
 </ol>
 
