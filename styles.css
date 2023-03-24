@@ -53,7 +53,10 @@ section#html p {
 
 section#sql p {
 
-  font-size: 16px;
+  font-size: 20px;
+  
+   color: blue;
+
 
 }
 
