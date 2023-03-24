@@ -183,9 +183,12 @@ footer {
   <li data-before="Truncate from table;" data-after="borra todos los datos de la tabla sin condición"></li>
   <li data-before="alter table table_name;" data-after=" borrado permanente"></li>
   <li data-before="drop column column_name;" data-after="borra la columna de una tabla permanentemente"></li>
-  <li data-before="update Tabla set columna_afectada = 'nuevo_dato' where ID=1;" data-after=" cambiar o actualizar los datos  de una tabla por id"></li>
+  <li data-before="update Tabla set columna_afectada = 'nuevo_dato' where ID=1;" data-after=" cambia o actualiza los datos o valores internos de cada columna de una tabla por id"></li>
   <li data-before="update tabla set Columna_afectada='Peru' where Columna_afectada='paris';" data-after=" cambia masivamente los datos cuidado"></li>
-  
+  <li data-before="sp_rename 'mi_tabla.nombre_antiguo', 'nombre_nuevo', 'COLUMN' ;" data-after=" cambia el nombre de una columna"></li>
+  <li data-before="sp_rename 'mi_tabla', 'nuevo_nombre';" data-after=" cambia el nombre de una tabla"></li>
+  <li data-before="ALTER DATABASE mi_base_datos MODIFY NAME = nuevo_nombre_base_datos;" data-after=" Cambia el nombre  de una base datos"></li>
+
 
 
 
