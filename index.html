@@ -362,8 +362,20 @@ ORDER BY country DESC;" data-after=" IN"></li>
 
  <li data-before="SELECT * FROM Customers WHERE customer_id = 5 AND age BETWEEN 22 AND 31;" data-after=" between"></li>
 
- <li data-before="SELECT DISTINCT ID_Proveedor FROM Productos;;" data-after=" distinct"></li>
+ <li data-before="SELECT DISTINCT ID_Proveedor FROM Productos;" data-after=" distinct"></li>
 
+<p>, Funciones de agregados </p>
+
+<li data-before="SELECT SUM(Precio_Venta) FROM Ventas;" data-after=" sum"></li>
+<li data-before="SELECT AVG(Precio_Venta) FROM Ventas;" data-after=" avg"></li>
+<li data-before="SELECT COUNT(*) FROM Ventas;" data-after=" count"></li>
+<li data-before="SELECT MAX(Precio_Venta) FROM Ventas;" data-after=" max"></li>
+<li data-before="SELECT MIN(Precio_Venta) FROM Ventas;" data-after=" min"></li>
+<li data-before="SELECT STDEV(Precio_Venta) FROM Ventas;" data-after=" stdev"></li>
+<li data-before="SELECT VAR(Precio_Venta) FROM Ventas;" data-after=" var"></li>
+<li data-before="SELECT GROUP_CONCAT(ID_Producto) FROM Ventas;" data-after=" gc"></li>
+<li data-before="SELECT FIRST(Precio_Venta) FROM Ventas;" data-after=" first"></li>
+<li data-before="SELECT (numero1 - numero2) / 5 AS resultado FROM numeros;" data-after=" resta y divicion"></li>
 
 </ol>
 
