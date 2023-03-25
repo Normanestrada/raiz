@@ -169,7 +169,21 @@ footer {
 <p>A continuación las consultas select mas usadas: SQL</p>
 
 <ol id="mysql">
- 
+
+<li data-before=select <all> <*>
+"<distinct>
+<top valor[percent ]>
+<alias.com>
+<as campo>
+<into tabla_destino>
+from <tabla> <as alias>
+<inner|left|right|cross join>
+<where condicion>
+<group by campo>
+<having condicion>
+<order by campo asc|desc>
+;" data-after=" Orden lógico extrictura"></li>
+
   <li data-before="use nombre_base;" data-after=" basica"></li>
   <li data-before="select * from.dbo.tblClientes;" data-after="basica"></li>
   <li data-before="delete from tabla;" data-after=" borrar datos de tabla"></li>
@@ -304,6 +318,30 @@ INNER JOIN character_tv_show
 ON character.id = character_tv_show.character_id
 INNER JOIN tv_show
 ON character_tv_show.tv_show_id = tv_show.id WHERE character.name= 'Doogie Howser' and tv_show.name= 'Doogie Howser, M.D.';" data-after=" join con where"></li>
+
+<p>Subconsultas:</p>
+
+SELECT c.name, s.sales
+FROM (SELECT customer, SUM(sales) AS sales FROM sales GROUP BY customer) s
+JOIN customers c ON s.customer = c.id
+
+SELECT p.name, s.sales
+FROM (SELECT product, SUM(sales) AS sales FROM sales GROUP BY product) s
+JOIN products p ON s.product = p.id
+
+SELECT d.name, e.employees
+FROM (SELECT department, COUNT(*) AS employees FROM employees GROUP BY department) e
+JOIN departments d ON e.department = d.id;
+
+SELECT c.name, AVG(s.sales) AS avg_sales
+FROM (SELECT customer, sales FROM sales) s
+JOIN customers c ON s.customer = c.id
+GROUP BY c.name
+
+SELECT d.name, e.employee_name
+FROM (SELECT department, employee_name FROM employees) e
+INNER JOIN departments d ON e.department = d.id
+
 
 
 </ol>
