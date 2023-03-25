@@ -377,7 +377,17 @@ ORDER BY country DESC;" data-after=" IN"></li>
 <li data-before="SELECT FIRST(Precio_Venta) FROM Ventas;" data-after=" first"></li>
 <li data-before="SELECT (numero1 - numero2) / 5 AS resultado FROM numeros;" data-after=" resta y divicion"></li>
 
-</ol>
+<li data-before=" SELECT * FROM productos WHERE nombre_producto = 'Camisa';" data-after=" igual"></li>
+<li data-before=" SELECT * FROM empleados WHERE salario < 50000;" data-after=" menor"></li>
+<li data-before=" SELECT * FROM ventas WHERE monto_total > 1000;" data-after=" mayor"></li>
+<li data-before=" SELECT * FROM empleados WHERE salario <= 50000;" data-after=" menor o igual"></li>
+<li data-before=" SELECT * FROM ventas WHERE monto_total >= 1000;" data-after=" mayor o igual"></li>
+<li data-before="  SELECT * FROM productos WHERE nombre_producto <> 'Camisa';" data-after=" diferete"></li>
+<li data-before="   SELECT * FROM productos WHERE nombre_producto != 'Camisa';" data-after=" especial"></li>
+<li data-before=" SELECT * FROM empleados WHERE salario !< 50000;" data-after=" especial"></li>
+<li data-before=" SELECT * FROM ventas WHERE monto_total !> 1000;" data-after=" especial"></li>
+
+  </ol>
 
 
   </section>
