@@ -181,8 +181,7 @@ from <tabla> <as alias>
 <where condicion>
 <group by campo>
 <having condicion>
-<order by campo asc|desc>
-;" data-after=" Orden lógico extrictura"></li>
+<order by campo asc|desc>;" data-after=" Orden lógico extrictura"></li>
 
   <li data-before="use nombre_base;" data-after=" basica"></li>
   <li data-before="select * from.dbo.tblClientes;" data-after="basica"></li>
@@ -321,26 +320,26 @@ ON character_tv_show.tv_show_id = tv_show.id WHERE character.name= 'Doogie Howse
 
 <p>Subconsultas:</p>
 
-SELECT c.name, s.sales
+<li data-before="SELECT c.name, s.sales
 FROM (SELECT customer, SUM(sales) AS sales FROM sales GROUP BY customer) s
-JOIN customers c ON s.customer = c.id
+JOIN customers c ON s.customer = c.id;" data-after=" basica"></li>
 
-SELECT p.name, s.sales
+<li data-before="SELECT p.name, s.sales
 FROM (SELECT product, SUM(sales) AS sales FROM sales GROUP BY product) s
-JOIN products p ON s.product = p.id
+JOIN products p ON s.product = p.id;" data-after=" basica"></li>
 
-SELECT d.name, e.employees
+<li data-before="SELECT d.name, e.employees
 FROM (SELECT department, COUNT(*) AS employees FROM employees GROUP BY department) e
-JOIN departments d ON e.department = d.id;
+JOIN departments d ON e.department = d.id;" data-after=" basica"></li>
 
-SELECT c.name, AVG(s.sales) AS avg_sales
+<li data-before="SELECT c.name, AVG(s.sales) AS avg_sales
 FROM (SELECT customer, sales FROM sales) s
 JOIN customers c ON s.customer = c.id
-GROUP BY c.name
+GROUP BY c.name;" data-after=" basica"></li>
 
-SELECT d.name, e.employee_name
+<li data-before="SELECT d.name, e.employee_name
 FROM (SELECT department, employee_name FROM employees) e
-INNER JOIN departments d ON e.department = d.id
+INNER JOIN departments d ON e.department = d.id;" data-after=" basica"></li>
 
 
 
