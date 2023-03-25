@@ -256,6 +256,56 @@ WHERE número_id = 1;" data-after=" modifica un dato existente condicionado wher
 
 <p>Consultas join:</p>
 
+<li data-before="Select* from  tablapadre
+inner join tablahijo
+on tablapadre.idxx = tablahijo.idxx;" data-after=" Une dos tablas siempre y cuando el campo de unión o id son iguales en ambos/también en tabla foráneas y primaria"></li>
+
+<li data-before="Select* from  tablapadre1
+inner join tablahijo
+on tablapadre.idxx = tablahijo.idxx
+
+inner join tablapadre2
+on tablapadre2.idxxx = tablahijo.idxx;" data-after=" Une tres tablas siempre y cuando el campo de unión o id son iguales en ambos/también en tabla foráneas y primaria"></li>
+
+<li data-before="Select campo1, campo2,campo3 from  tablapadre1
+inner join tablahijo
+on tablapadre.idxx = tablahijo.idxx
+inner join tablapadre2
+on tablapadre2.idxxx = tablahijo.idxx;" data-after=" Une tablas con columnas especificas"></li>
+
+
+<li data-before="Select campo1, campo2, tabla1.campo3, tabla2.campo3 tabla.columna from  tablapadre1
+inner join tablahijo
+on tablapadre.idxx = tablahijo.idxx
+inner join tablapadre2
+on tablapadre2.idxxx = tablahijo.idxx;" data-after=" Une tablas con columnas especifica y cuando las tablas poseen campos con  nombre igual seleccionar  tabla.campo"></li>
+
+
+<li data-before="Select* from  tablapadre1
+inner join tablahijo
+on tablapadre.idxx = tablahijo.idxx
+inner join tablapadre2
+on tablapadre2.idxxx = tablahijo.idxx
+inner join tablahijo
+on tablapadre2.id =tablahijo.id;" data-after=" Une cuatro tablas"></li>
+
+<li data-before="SELECT campo1,campo2,campo3 from ( select* from dbo.alumnos) as tabla1,
+( select* from dbo.materias) as tabla2
+ where tabla1.id_alum=tabla2.id_alum;" data-after=" Select anidados o subconsulta de dos tablas"></li>
+
+<li data-before="Select character.name, actor.name from character 
+INNER JOIN character_actor ON character.id= character_actor.character_id 
+INNER JOIN actor 
+ON character_actor.actor_id= actor.id;" data-after=" otra manera de join en tres tablas"></li>
+ 
+<li data-before="SELECT character.name, tv_show.name
+FROM character
+INNER JOIN character_tv_show
+ON character.id = character_tv_show.character_id
+INNER JOIN tv_show
+ON character_tv_show.tv_show_id = tv_show.id WHERE character.name= 'Doogie Howser' and tv_show.name= 'Doogie Howser, M.D.';" data-after=" join con where"></li>
+
+
 </ol>
 
 
