@@ -267,7 +267,7 @@ WHERE número_id = 1;" data-after=" modifica un dato existente condicionado wher
 
 <li data-before="DELETE FROM tabla_ejemplo WHERE numero_id = 1;" data-after=" borra un dato existente condicionado where con id cuidado"></li>
 
-<p>Consultas join:</p>
+<p>Consultas join tablas relacionales:</p>
 
 <li data-before="Select* from  tablapadre
 inner join tablahijo
@@ -318,7 +318,7 @@ ON character.id = character_tv_show.character_id
 INNER JOIN tv_show
 ON character_tv_show.tv_show_id = tv_show.id WHERE character.name= 'Doogie Howser' and tv_show.name= 'Doogie Howser, M.D.';" data-after=" join con where"></li>
 
-<p>Subconsultas:</p>
+<p>Subconsultas o anidadas</p>
 
 <li data-before="SELECT c.name, s.sales
 FROM (SELECT customer, SUM(sales) AS sales FROM sales GROUP BY customer) s
