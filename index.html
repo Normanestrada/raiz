@@ -341,13 +341,13 @@ GROUP BY c.name;" data-after=" basica"></li>
 FROM (SELECT department, employee_name FROM employees) e
 INNER JOIN departments d ON e.department = d.id;" data-after=" basica"></li>
 
-<p>, and , like, IN, distinc,beetween</p>
+<p>, Operadores not, and , like, IN, distinc,beetween</p>
 
 
  <li data-before="Select * FROM Customers WHERE country LIKE 'usa%;" data-after=" like"></li>
 
 
- <li data-before="SELECT first_name,last_name from Customers where not last_name='Reinhardt' and age >='22';" data-after=" Not"></li>
+ <li data-before="SELECT first_name,last_name from Customers where not last_name='Reinhardt' and age >='22';" data-after=" Not y and"></li>
 
 
  <li data-before="SELECT * FROM Customers WHERE country IN('USA', 'UK')
@@ -361,6 +361,8 @@ ORDER BY country DESC;" data-after=" IN"></li>
 
 
  <li data-before="SELECT * FROM Customers WHERE customer_id = 5 AND age BETWEEN 22 AND 31;" data-after=" between"></li>
+
+ <li data-before="SELECT DISTINCT ID_Proveedor FROM Productos;;" data-after=" distinct"></li>
 
 
 </ol>
