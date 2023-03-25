@@ -377,15 +377,56 @@ ORDER BY country DESC;" data-after=" IN"></li>
 <li data-before="SELECT FIRST(Precio_Venta) FROM Ventas;" data-after=" first"></li>
 <li data-before="SELECT (numero1 - numero2) / 5 AS resultado FROM numeros;" data-after=" resta y divicion"></li>
 
-<li data-before=" SELECT * FROM productos WHERE nombre_producto = 'Camisa';" data-after=" igual"></li>
-<li data-before=" SELECT * FROM empleados WHERE salario < 50000;" data-after=" menor"></li>
-<li data-before=" SELECT * FROM ventas WHERE monto_total > 1000;" data-after=" mayor"></li>
-<li data-before=" SELECT * FROM empleados WHERE salario <= 50000;" data-after=" menor o igual"></li>
-<li data-before=" SELECT * FROM ventas WHERE monto_total >= 1000;" data-after=" mayor o igual"></li>
-<li data-before="  SELECT * FROM productos WHERE nombre_producto <> 'Camisa';" data-after=" diferete"></li>
-<li data-before="   SELECT * FROM productos WHERE nombre_producto != 'Camisa';" data-after=" especial"></li>
-<li data-before=" SELECT * FROM empleados WHERE salario !< 50000;" data-after=" especial"></li>
-<li data-before=" SELECT * FROM ventas WHERE monto_total !> 1000;" data-after=" especial"></li>
+<li data-before="SELECT * FROM productos WHERE nombre_producto = 'Camisa';" data-after=" igual"></li>
+<li data-before="SELECT * FROM empleados WHERE salario < 50000;" data-after=" menor"></li>
+<li data-before="SELECT * FROM ventas WHERE monto_total > 1000;" data-after=" mayor"></li>
+<li data-before="SELECT * FROM empleados WHERE salario <= 50000;" data-after=" menor o igual"></li>
+<li data-before="SELECT * FROM ventas WHERE monto_total >= 1000;" data-after=" mayor o igual"></li>
+<li data-before=" SELECT * FROM productos WHERE nombre_producto <> 'Camisa';" data-after=" diferete"></li>
+<li data-before="SELECT * FROM productos WHERE nombre_producto != 'Camisa';" data-after=" especial"></li>
+<li data-before="SELECT * FROM empleados WHERE salario !< 50000;" data-after=" especial"></li>
+<li data-before="SELECT * FROM ventas WHERE monto_total !> 1000;" data-after=" especial"></li>
+
+
+<p>Funciones de agregados en select anidado</p>
+<li data-before="SELECT COUNT(DISTINCT Country) FROM Customers;" data-after=" especial count"></li>
+
+<li data-before="SELECT Count(*) AS nuevo_campo
+FROM (SELECT DISTINCT Country FROM Customers);" data-after=" especial distict"></li>
+
+<li data-before="SELECT  *FROM Customers where first_name='John' and last_name='Doe' and age= 31;" data-after=" especial and"></li>
+
+<li data-before="SELECT first_name,last_name  FROM Customers where first_name='John' or last_name='Doe' or age= 31;" data-after=" especial or"></li>
+
+<li data-before="SELECT AVG(Age)
+FROM Employees
+WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE Name = 'Sales');" data-after=" especial where"></li>
+
+<li data-before="SELECT Name
+FROM Employees
+WHERE Salary > (SELECT AVG(Salary) FROM Employees);" data-after=" especial avg"></li>
+
+<li data-before="SELECT Name
+FROM Departments
+WHERE NOT EXISTS (SELECT  FROM Employees
+                  WHERE DepartmentID =1 Departments.DepartmentID AND Age <= 30);;" data-after=" especial Not exist"></li>
+
+
+<li data-before="SELECT department, (SELECT SUM(salary) FROM employees WHERE department = e.department) AS total_salary
+FROM employees e
+GROUP BY department;" data-after=" especial sum"></li>
+
+<li data-before="SELECT year, product, (SELECT SUM(sales) FROM sales WHERE year = s.year AND product = s.product) AS total_sales
+FROM sales s
+GROUP BY year, product;" data-after=" especial sum"></li>
+
+
+
+
+
+
+
+
 
   </ol>
 
