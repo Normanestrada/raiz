@@ -149,6 +149,8 @@ ol {
 #mysql li::before {
   content: attr(data-before);
   color: black;
+padding-left: 40px;
+
 }
 
 #mysql li[data-before$=";"]::after {
