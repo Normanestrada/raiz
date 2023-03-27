@@ -432,12 +432,12 @@ BEGIN
   SELECT columna1, columna2
   FROM Nombre_Tabla
   WHERE columna3 = @Parametro1 AND columna4 = @Parametro2 
-END;" data-after=" Extrictura básica procedimiento almacenado"></li>
+END;" data-after=" Encapsula consultas frecuentes pero compleja lógica de negocio personalizable por multi usuario optimizando"></li>
 
 <li data-before="CREATE VIEW Nombre_Vista AS
 SELECT columna1, columna2, columna3
 FROM Nombre_Tabla
-WHERE columna4 = 'Valor_Deseado';" data-after=" Extrictura básica vistas"></li>
+WHERE columna4 = 'Valor_Deseado';" data-after=" Encapsula vistas sencillas muy utilizadas optimiza"></li>
 
 
 <li data-before="CREATE TRIGGER Nombre_Trigger
@@ -448,7 +448,7 @@ BEGIN
   --Código del trigger aquí
   INSERT INTO Log_Tabla (Fecha, Operacion)
   VALUES (GETDATE(), 'Se realizó una operación en Nombre_Tabla')
-END;" data-after=" Extrictura básica trigguer"></li>
+END;" data-after=" disparador automatico al inserción,eliminación,actualizacion "></li>
 
 
 <li data-before="DROP PROCEDURE Nombre_Procedimiento;" data-after=" borrar procedure"></li>
@@ -488,6 +488,27 @@ AS
 BEGIN
   -- Cuerpo del stored procedure modificado
 END;" data-after=" modifica el cuerpo"></li>
+
+
+<li data-before="CREATE FUNCTION nombre_funcion (@parametro tipo_dato)
+RETURNS tipo_dato_retorno
+AS
+BEGIN
+  -- Cuerpo de la función
+END;" data-after=" almacena datos complejo en particular de cálculos optimiza"></li>
+
+
+<li data-before="CREATE FUNCTION fn_calcular_salario_anual (@salario_mensual MONEY)
+RETURNS MONEY
+AS
+BEGIN
+  DECLARE @salario_anual MONEY;
+  
+  SET @salario_anual = @salario_mensual * 12;
+  
+  RETURN @salario_anual;
+END;" data-after=" almacena datos complejo de calculo"></li>
+
 
 
   </ol>
