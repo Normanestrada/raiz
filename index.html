@@ -458,6 +458,37 @@ END;" data-after=" Extrictura básica trigguer"></li>
 <li data-before="DROP TRIGGER Nombre_Trigger
 ON Nombre_Tabla;" data-after=" borrar Trigguer"></li>
 
+<li data-before="EXEC sp_rename 'Nombre_Procedimiento', 'Nuevo_Nombre_Procedimiento';" data-after=" cambia el nombre"></li>
+
+<li data-before="EXEC sp_rename 'Nombre_Vista', 'Nuevo_Nombre_Vista';" data-after=" cambia el nombre"></li>
+
+<li data-before="EXEC sp_rename 'Nombre_Tabla.Nombre_Trigger', 'Nuevo_Nombre_Trigger', 'OBJECT';" data-after=" cambia el nombre"></li>
+
+
+
+<li data-before="ALTER TRIGGER tr_upd_employee
+ON employee
+AFTER UPDATE
+AS
+BEGIN
+  -- Cuerpo del trigger modificado
+END;" data-after=" modifica el cuerpo"></li>
+
+<li data-before="ALTER VIEW v_employee_data
+AS
+SELECT emp_id, emp_name, emp_salary
+FROM employee
+WHERE emp_status = 'active';" data-after=" modifica el cuerpo"></li>
+
+
+
+<li data-before="ALTER PROCEDURE sp_get_employee_data
+  @emp_id INT
+AS
+BEGIN
+  -- Cuerpo del stored procedure modificado
+END;" data-after=" modifica el cuerpo"></li>
+
 
   </ol>
 
