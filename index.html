@@ -421,7 +421,7 @@ FROM sales s
 GROUP BY year, product;" data-after=" especial sum"></li>
 
 
-<p>Procedimientos almacenados</p>
+<p>Procedimientos almacenados, Trigguer, vistas</p>
 
 <li data-before="CREATE PROCEDURE Nombre_Procedimiento
   @Parametro1 TipoDato,
@@ -434,9 +434,21 @@ BEGIN
   WHERE columna3 = @Parametro1 AND columna4 = @Parametro2 
 END;" data-after=" Extrictura básica procedimiento almacenado"></li>
 
+<li data-before="CREATE VIEW Nombre_Vista AS
+SELECT columna1, columna2, columna3
+FROM Nombre_Tabla
+WHERE columna4 = 'Valor_Deseado';" data-after=" Extrictura básica procedimiento almacenado"></li>
 
 
-
+<li data-before="CREATE TRIGGER Nombre_Trigger
+ON Nombre_Tabla
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+  --Código del trigger aquí
+  INSERT INTO Log_Tabla (Fecha, Operacion)
+  VALUES (GETDATE(), 'Se realizó una operación en Nombre_Tabla')
+END;" data-after=" Extrictura básica procedimiento almacenado"></li>
 
 
 
