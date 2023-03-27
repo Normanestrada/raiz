@@ -131,6 +131,7 @@ ol {
   font-size: 12px;
   max-width: 600px;
   width: 80%;
+  counter-reset: lista 0 150;
 }
 
 /*Controlador de  color rojo before punto y coma y after comillas  sección sql*/
@@ -149,7 +150,7 @@ ol {
 #mysql li::before {
   content: attr(data-before);
   color: black;
-padding-left: 40px;
+padding-left: 20px;
 
 }
 
