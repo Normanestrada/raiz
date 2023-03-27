@@ -546,6 +546,36 @@ WHEN MATCHED THEN
 WHEN NOT MATCHED THEN
     INSERT (campo1, campo2) VALUES (S.campo1, S.campo2);" data-after=" Operación merge para combinar tabla existente a una vacía inserta,actualiza,elimina"></li>
 
+<li data-before="SELECT * 
+FROM tabla 
+WHERE fecha = '2023-03-27';" data-after=" consulta fecha basica"></li>
+
+
+<li data-before="SELECT * 
+FROM tabla 
+WHERE fecha BETWEEN '2023-01-01' AND '2023-03-31' 
+ORDER BY fecha ASC;" data-after=" consulta fecha media"></li>
+
+
+<li data-before="SELECT YEAR(fecha) AS Año, MONTH(fecha) AS Mes, COUNT(*) AS TotalRegistros
+FROM tabla 
+WHERE fecha BETWEEN '2022-01-01' AND '2023-12-31' 
+GROUP BY YEAR(fecha), MONTH(fecha)
+HAVING COUNT(*) > 100
+ORDER BY Año ASC, Mes ASC;" data-after=" consulta fecha avanzada"></li>
+
+
+
+<li data-before="SELECT TOP 10 C.IDcliente AS ClienteID, C.Nombre AS ClienteNombre, C.Apellido AS ClienteApellido,
+       P.Nombre AS ProveedorNombre, COUNT(*) AS TotalPedidos
+FROM Cliente AS C
+INNER JOIN Proveedor AS P ON C.IDcliente = P.IDcliente
+WHERE C.Nombre LIKE 'A%' AND P.Nombre <> 'Proveedor X'
+GROUP BY C.IDcliente, C.Nombre, C.Apellido, P.Nombre
+HAVING COUNT(*) > 5
+ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa"></li>
+
+
 
 
 
