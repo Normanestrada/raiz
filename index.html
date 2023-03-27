@@ -421,6 +421,19 @@ FROM sales s
 GROUP BY year, product;" data-after=" especial sum"></li>
 
 
+<p>Procedimientos almacenados</p>
+
+<li data-before="CREATE PROCEDURE Nombre_Procedimiento
+  @Parametro1 TipoDato,
+  @Parametro2 TipoDato
+AS
+BEGIN
+  --Código del procedimiento aquí
+  SELECT columna1, columna2
+  FROM Nombre_Tabla
+  WHERE columna3 = @Parametro1 AND columna4 = @Parametro2 
+END;" data-after=" Extrictura básica procedimiento almacenado"></li>
+
 
 
 
