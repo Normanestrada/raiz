@@ -512,10 +512,39 @@ END;" data-after=" almacena datos complejo de calculo"></li>
 
 <li data-before="DECLARE @nombre varchar(50) = 'Juan';
 DECLARE @edad int = 30;
-
 SELECT *
 FROM tabla_personas
 WHERE nombre = @nombre AND edad > @edad;" data-after=" creación de variables en consulta"></li>
+
+<li data-before="PRINT 'Hola, esta es una consulta básica de impresión de texto';" data-after=" imprimir  texto"></li>
+
+<li data-before="BULK INSERT tabla_ejemplo
+FROM 'C:\archivo_ejemplo.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    FIRSTROW = 2
+);" data-after=" volcado de dato de txt a tabla sql"></li>
+
+<li data-before="Select campo1,campo2 from table order by campo1,campo2 desc
+Offset 50 rows fetch next 50 rows only;" data-after=" selección de filas especificas"></li>
+
+<li data-before="SELECT campo1, campo2
+FROM tabla
+ORDER BY campo1, campo2 DESC
+OFFSET 20 ROWS
+FETCH NEXT 5 ROWS ONLY;" data-after=" selección de filas 20 a la 25"></li>
+
+<li data-before="SELECT TOP 10 campo1, campo2
+FROM tabla;" data-after=" selección de filas TOP"></li>
+
+<li data-before="MERGE INTO tabla_destino AS T
+USING tabla_origen AS S
+ON T.campo1 = S.campo1
+WHEN MATCHED THEN
+    UPDATE SET T.campo2 = S.campo2
+WHEN NOT MATCHED THEN
+    INSERT (campo1, campo2) VALUES (S.campo1, S.campo2);" data-after=" Operación merge para combinar tabla existente a una vacía inserta,actualiza,elimina"></li>
 
 
 
