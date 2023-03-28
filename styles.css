@@ -172,6 +172,7 @@ ol {
 #mysql2 li {
   font-size: 16px;
   line-height: 1.5;
+  margin-left: 30px;
 }
 
 #mysql2 li::after {
@@ -181,7 +182,7 @@ ol {
 #mysql2 li::before {
   content: attr(data-before);
   color: black;
-  padding-left: 50px;
+  padding-left: 20px;
   display: inline-block;
   
 
