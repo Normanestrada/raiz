@@ -124,8 +124,8 @@ section p {
 
 
 
-/*Tamaños de letra se sección sql*/
-
+/*Tamaños de letra se sección sql más un margen para que se logre visualizar tres digitos*/
+/* En los números de secuencia de 100 a más ya que sin el margen positivo solo se ven dos digitos*/
 
 ol {
   font-size: 12px;
