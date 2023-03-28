@@ -192,6 +192,10 @@ ol {
 }
 
 
+#mysql2 li::before {
+  content: "-- " counter(mysql2-counter) ". ";
+}
+
 
 
 
