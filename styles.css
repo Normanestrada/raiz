@@ -162,3 +162,31 @@ ol {
 }
 
 
+
+
+
+
+
+
+
+#mysql2 li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#mysql2 li::after {
+  content: "";
+}
+
+#mysql2 li::before {
+  content: attr(data-before);
+  color: black;
+  padding-left: 20px;
+  
+
+}
+
+#mysql2 li[data-before$=";"]::after {
+  content: attr(data-after);
+  color: red;
+}
