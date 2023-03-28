@@ -179,8 +179,8 @@ ol {
   content: attr(data-before);
   color: black;
   padding-left: 20px;
-  padding-right: 80px;
-  
+  text-indent: -20px;
+   
 
 }
 
