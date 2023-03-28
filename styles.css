@@ -179,7 +179,7 @@ ol {
   content: attr(data-before);
   color: black;
   padding-left: 20px;
-  text-indent: -20px;
+  text-indent: 80px;
    
 
 }
