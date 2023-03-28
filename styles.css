@@ -169,6 +169,8 @@ ol {
 #mysql2 li {
   font-size: 16px;
   line-height: 1.5;
+  text-indent: 80px;
+
 }
 
 #mysql2 li::after {
@@ -179,7 +181,7 @@ ol {
   content: attr(data-before);
   color: black;
   padding-left: 20px;
-  text-indent: 80px;
+  
    
 
 }
