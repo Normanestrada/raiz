@@ -182,6 +182,7 @@ ol {
   content: attr(data-before);
   color: black;
   padding-left: 50px;
+  display: inline-block;
   
 
 }
