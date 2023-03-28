@@ -134,13 +134,6 @@ ol {
 }
 
   
-ol {
-  counter-reset: lista 0 150;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-}
 
 /*Controlador de  color rojo before punto y coma y after comillas  sección sql*/
 /* Es decir una vez termine comillas pero después de un punto y coma se marcará color rojo*/
@@ -159,8 +152,7 @@ ol {
   content: attr(data-before);
   color: black;
   padding-left: 20px;
-  counter-increment: lista;
-  content: counter(lista) ". ";
+  
 
 }
 
