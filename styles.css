@@ -169,8 +169,7 @@ ol {
 #mysql2 li {
   font-size: 16px;
   line-height: 1.5;
-  text-indent: 80px;
-content: "-- " counter(mysql2-counter) ". ";
+  
 
 
 }
