@@ -181,7 +181,7 @@ ol {
 #mysql2 li::before {
   content: attr(data-before);
   color: black;
-  padding-left: 5px;
+  padding-left: 50px;
   
 
 }
