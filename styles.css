@@ -199,9 +199,10 @@ ol {
 
 #codigocubo { 
 
-font-size: 12px;
+font-size: 14px;
 max-width: 600px;
 width: 80%;
+text-align: justify;
 
 
 }
