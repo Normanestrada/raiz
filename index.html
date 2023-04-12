@@ -736,6 +736,35 @@ Ingresar a power BI
 
 - pasos de configuración mismo que los del data tool . 
 
+
+
+<p>Linked server</p>
+
+- Vincular servidores de la Data Warehouse que pueden ser como :  MySQL, Oracle, soluciones en la nube con: Amazon Redshift, Microsoft Azure, Google cloud 
+
+- Dif entre  Oracle y sql: Integración: SQL Server está diseñado para integrarse con otras herramientas de Microsoft, como Excel, Power BI y Visual Studio. 
+  Oracle también ofrece integración con algunas de estas herramientas, pero no es tan estrecha como la de SQL Server con las herramientas de Microsoft.
+
+ -Plataforma: Oracle se ejecuta en una amplia variedad de plataformas, incluyendo Unix, Linux y Windows. SQL Server solo se ejecuta en plataformas de Microsoft Windows.
+  crece más a nivel horizontal  por eso resulta muy conveniente unir ambas plataformas 
+
+Pasos:
+- El servidor externo debera crearle un usuario y clave  específico para una base de datos específicas desde Oracle, MySQL, Azure, etc según sea el caso. 
+
+- El objetivo es que la bd sea visible en el sql server se conecte desde ahí y se pueda trabajar la base de datos
+- Se requiere un data source / ODBC en la computadora buscar ODBC, hay varias pestañas elegir DNS de sistemas, agregar, se elige la conexion o nombre de la plataforma a conectarse MySQL, Oracle, etc.  Si no 
+   aparece Drivers  buscar en Google y descargo ejemplo : driver odbc MySQL.  Finalizar. Aparece pantalla de datos que se llenarán nombre: cualquiera(guardar ese nombre), servidor: localhost o el servidor de red,
+   usuario y contraseña del que se les creo en en MySQL o Oracle.  Y aceptar.
+- Luego en sql server buscar server objeto, linked server, click derecho nuevo servidor vinculado, nombre: nombre deseado nuevo, tipo de servidor: otras fuentes y seleccionar la fuente 
+  el cuál  para lo que vamos hacer sería  Microsoft ole provider foto ODBC driver, El resto de campo el mas importante es  data source: "colocar el nombre puesto en la configuración primera del  OBDC".
+  Nombre del producto: según sea si es para MySQL se coloca mysql, si es Oracle se coloca Oracle  etc. Solo eso se llenan. 
+
+- En pestaña seguridad solo colocar el usuario y la clave que now crearon de la otra plataforma a conectarse. Y listo aceptar.
+ -Luego se nos debió haberse creado la figura de conexión debajo de linked server con el nombre  creado en sql. Clik derecho tets conexión y la conexión deberá ser exitosa.
+ -Provider o permisos  siempre en sql server en la carpeta provider debajo de linken server abrir, buscar MSDASQL, doble click,  aparecen muchos permisos seleccionar allow inproces y level Zero only  ,aceptar 
+
+ -En la nueva figura creada buscar la base de datos y más tablas si ya hay accesos.  La forma de consultar atravez de linked server es así: select * from nombreBD...clientes;
+
 </pre>
 
 
