@@ -712,6 +712,29 @@ O en el excel desde una base de datos, desde una fuente de datos, desde ANALISIS
 - ahí mismo en el boruser se pueden crear nuevos cálculos en la tabla deseada en la parte superior dice  click en calculate, luego clik derecho, nuevo cálculo. El lenguaje a utilizar puede ser lenguaje natural de expresión sql server ejemplo:  Case , when , them, else. 
 
 
+<p>CUBOS MULTIDIMENCIONAL TABLAS SQL HA POWER BI PARA GRAFICOS.</p>
+
+Ingresar a power BI 
+- ingrese a la base de sql server
+- En bases grandes con muchas tablas es conveniente generar una vista un scirp sql y un nuevo modelado  y con las tablas que se van a analizar y luego aplicarle una vista de tablas.
+- Desde power  BI ingresar a la opción sql server , nombre de servidor(data engine) y clave o nombre de la base.
+- Se abrirá la base cargada con todas las tablas, seleccionar la tablas deseadas. 
+- Revisar las tablas si están correctas en sus datos e irse a la sección de modelado de tablas en power bi y si no están relacionadas aplicarsela manual a como quedó el modelado en sql server. 
+- Relacionar de acuerdo a los datos, recuerde que las relaciones es entre campos con mismos valores, manual con el mouse o con el asistente en la opción administrar relaciones. 
+- Al  igual que en los cubos de data tool debería haber una tabla principal y varias dimensiones. 
+- Una vez terminado las relaciones en la opción de informes podrás crear los gráficos o KPI. 
+
+<p>CUBOS MULTIDIMENCIONAL CON SQL SERVER 2019 ; ANALISIS SERVICE Y VISUAL STUDIO 2019</p>
+
+- Se recomienda trabajar trabajar con usuaria SA.  Por lo tanto si ingresas con autenticación Windows irse luego a seguridad, login, sa,  
+  clik derecho propiedades, nuevas claves, pestaña status, habilitar o deseable. Y aceptar. Luego salirse de  sql y autenticarse con usuarios creados SA. 
+- Otros deatalles en caso que no se habilite los nuevos usuarios.   Windows R, aplicar services.msc , buscar sql agente, clik derecho iniciar. 
+- Accesos de base de datos: en una organización deberán crear un linken server para accesos a la base maestra. Pero si es una PC de nuestra clik derecho en base de datos de sql, restaurar, añadir, buscar la base descargada tipo bak  y aplicar.  Arrastrar la base descargada al archivo correcto.  Si no permite desde el sql solo copiar la URL destino del sql al navegador y pegar el archivo de la base. Luego actualizar en el sql. 
+
+- Ahora conectarse a análisis Services, sin desconectarse de databases engine  . Admite ambas conexiones. 
+- Abrir visual studio 2019  opción proyecto MULTIDIMENCIONAL y minería de datos, nombre del proyecto, aceptar. 
+
+- pasos de configuración mismo que los del data tool . 
 
 </pre>
 
