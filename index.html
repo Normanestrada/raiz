@@ -638,7 +638,6 @@ Ejemplo tabla principal cliente ID venta, nombre, cédula ha tabla transaccional
 <p>Tipos de cubo: de  análisis y de integración.</p>
 
 <pre id="codigocubo">
-
 ANÁLISIS SERVICES ; analiza grandes cantidades de datos o mineria de datos  o cubos miltidimencionales con herramientas de análisis  y visualización 
 como excel y power bi  entre otras: sql, análisis Services y visual opción análisis Services o mineria de datos 
 
@@ -649,8 +648,53 @@ Ver videos de cubos olap inteligencia de negocio o  integration service.
 
  
 <p>Cubos o analisis multidimensional análisis Services y data tool 
-con destino excel para tablas dinámicas.</p>
+   con destino excel para tablas dinámicas.</p>
 
+-Los accesos son:  base de datos relacionales en  sql server, opción análisis Services, visual studio. El destino puede ser excel o power Bi.
+-Se recomieda crear una vista  o relación en sql en caso que no la haya.  Debe haber tabla de :(hechos o principal  o grupo de medida)  y está misma tabla con sus medidas. Y  tablas de (dimensiones o transaccionales)
+ejemplo: 
+Tabla de hecho, o grupo de medida una tabla llamada Ventas es un grupo de medida, con sus medidas que serían ID de venta, ventas día, ventas mes, ventas totales.  Por lo general poseen más código o números. 
+Tabla dimensionales: serían las tablas dígamos  secundarias donde  brindan más contexto y análisis como quien, como, cuando, dónde . Podría ser tablas como 
+Productos, empleados, tiempo clientes. 
+
+Según la versión algunos atajos: 
+- Sql server data tool o business inteligence (visual studio), Archivo, Nuevo, Proyecto.
+Pestaña business inteligence; proyecto  multidimensional mineria de datos o análisis service;
+Asignar nuevo nombre y aceptar.
+
+- aparecerá nueva ventana de soluciones
+Qué hay que configurar una a una las opciones son: 
+
+ORIGENES DE DATOS:- click derecho, nuevo origen de datos, aparecera el asistente de configuración los pasos son;  dar siguiente, opción nueva,  nombre del servidor: "tu servidor sql",  tipo de autenticación: "autenticación SA"  y "Contraseña", Nombre de base de datos;  "seleccionar tu base  de datos multidimensional" , probar conexión; deberá salir conexión exitosa.  y aceptar. 
+- en esta pantalla deberá estar seleccionado una opción que diga " crear un origen de datos basado en conexión nueva o existente"
+Luego botón next,  en esa pantalla seleccionar utilizar cuenta de servicio, luego next , y clik en finalizar.
+
+VISTAS DE ORIGEN DE DATOS: -clik derecho, nuevo origen de las vistas de origen de datos, 
+Aparece pantalla darle next, aparecera otra pantalla con los datos configurado anteriormente si todo está bien dar siguente,  en esta pantalla se deberá seleccionar de izquierda a derecha la tabla maestra y tablas  dimensiones. . Clik en finalizar. 
+
+CUBO: -clik derecho nuevo cubo, aparece pantalla dar siguente,  hay varias opciones con tabla existente, crear cubo vacío, generar tabla en origen de datos, nosotros seleccionamos ". Con tablas existentes"
+Siguiente, en esta pantalla se  selecciona la tabla principal o grupo de medida o de hecho, por lo general solo es una, darle click y  dar siguente, aparece resumen de  la tabla principal y sus medidas, dar siguente,  en esta pantalla aparecerán RESUMEN de  las dimensiones, dar siguiente. Aparecera pantalla final con el resumen del grupo de medida con sus medida y sus dimensiones, finalizar y apareceran las vistas del cubo o tablas. 
+
+VISTAS DEL ORIGEN DE DATOS o VISTAS DE MEDIDA Y DIMENSIONES 
+
+- Podremos  editar en esta pantalla las Medidas y las Dimensiones. Menú izquierdo. 
+- Se deben  editar las dimensiones clik derecho en   editar o doble clik en la tabla dimension. Aparecera unos lane o pool de diagrama donde hay atributos,  jerarquías y vistas de tabla.  Se deben pasar manualmente los campos deseado  que están en la sección vistas a la sección jerarquía. Clik derecho en el título o la pestaña abierta , guardar.  
+
+
+EJECUTAR CUBO
+- debajo de la opción cubo debería aparecer el nombre del nuevo cubo. Clik derecho proceso.  
+- si se ejecuta con error hay que revisar la instancia.   Al inicio  de las opciones aparece el nombre de la instancia del cubo , clik derecho propiedades aparecen tres opciones compilar, depurar, implemnetar. Seleccionar implementar y se deberá cambiar el nombre de la instancia local por la dimensional.   Vaya  a sql server y haga como que se va a  conéctese a  análisis Services,  copie el nombre del servidor . Y luego pegarlo en la opción anterior de implementación  en vez del nombre del servidor local.  Y aceptar. Si hay problema pruebe conectarse al servidor de database engine  y pruebe.
+Prueba de nuevo correr en proceso de ejecutar cubo. 
+
+
+BROUSER Y EXPORTAR:  
+-una vez que haya corrido, cerrar todo las pestañas innecesarias. Dejar solo la de las vistas.  En la parte superior deberá estar la opción navegar o BROUSER. Clik  ahí. Luego aparece ventana  de los metadatos.
+Arrastrando lo deseado a la derecha  se puede jugar tipo pigote de excel antes de su exportación para corroborar si todo está correcto. 
+
+-Si todo está bien y deseamos exportar ma tabla. A excel en la parte superior aparece icono de excel o exportar a excel y se habríra nuestro excel con el cubo realizado. 
+O en el excel desde una base de datos, desde una fuente de datos, desde ANALISIS SERVICE. Colocar servidor , autenticación Windows. Listo.  Si lo desea para otra persona y lo vea actualizado se deberá crear una carpeta compartida a red. 
+
+- ahí mismo en el boruser se pueden crear nuevos cálculos en la tabla deseada en la parte superior dice  click en calculate, luego clik derecho, nuevo cálculo. El lenguaje a utilizar puede ser lenguaje natural de expresión sql server ejemplo:  Case , when , them, else. 
 
 
 
