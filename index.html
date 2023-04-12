@@ -665,26 +665,41 @@ Asignar nuevo nombre y aceptar.
 - aparecerá nueva ventana de soluciones
 Qué hay que configurar una a una las opciones son: 
 
-ORIGENES DE DATOS:- click derecho, nuevo origen de datos, aparecera el asistente de configuración los pasos son;  dar siguiente, opción nueva,  nombre del servidor: "tu servidor sql",  tipo de autenticación: "autenticación SA"  y "Contraseña", Nombre de base de datos;  "seleccionar tu base  de datos multidimensional" , probar conexión; deberá salir conexión exitosa.  y aceptar. 
+ORIGENES DE DATOS:
+- click derecho, nuevo origen de datos, aparecera el asistente de configuración los pasos son; 
+  dar siguiente, opción nueva, nombre del servidor: "tu servidor sql",  tipo de autenticación: "autenticación SA"  y "Contraseña",
+  Nombre de base de datos;  "seleccionar tu base  de datos multidimensional" , probar conexión; deberá salir conexión exitosa.  y aceptar. 
 - en esta pantalla deberá estar seleccionado una opción que diga " crear un origen de datos basado en conexión nueva o existente"
 Luego botón next,  en esa pantalla seleccionar utilizar cuenta de servicio, luego next , y clik en finalizar.
 
-VISTAS DE ORIGEN DE DATOS: -clik derecho, nuevo origen de las vistas de origen de datos, 
-Aparece pantalla darle next, aparecera otra pantalla con los datos configurado anteriormente si todo está bien dar siguente,  en esta pantalla se deberá seleccionar de izquierda a derecha la tabla maestra y tablas  dimensiones. . Clik en finalizar. 
+VISTAS DE ORIGEN DE DATOS:
+-clik derecho, nuevo origen de las vistas de origen de datos, 
+Aparece pantalla darle next, aparecera otra pantalla con los datos configurado anteriormente si todo está bien dar siguente,  
+en esta pantalla se deberá seleccionar de izquierda a derecha la tabla maestra y tablas  dimensiones. . Clik en finalizar. 
 
-CUBO: -clik derecho nuevo cubo, aparece pantalla dar siguente,  hay varias opciones con tabla existente, crear cubo vacío, generar tabla en origen de datos, nosotros seleccionamos ". Con tablas existentes"
-Siguiente, en esta pantalla se  selecciona la tabla principal o grupo de medida o de hecho, por lo general solo es una, darle click y  dar siguente, aparece resumen de  la tabla principal y sus medidas, dar siguente,  en esta pantalla aparecerán RESUMEN de  las dimensiones, dar siguiente. Aparecera pantalla final con el resumen del grupo de medida con sus medida y sus dimensiones, finalizar y apareceran las vistas del cubo o tablas. 
+CUBO: 
+-clik derecho nuevo cubo, aparece pantalla dar siguente,  hay varias opciones con tabla existente, crear cubo vacío,
+ generar tabla en origen de datos, nosotros seleccionamos ". Con tablas existentes"
+ Siguiente, en esta pantalla se  selecciona la tabla principal o grupo de medida o de hecho, por lo general solo es una,
+ darle click y  dar siguente, aparece resumen de  la tabla principal y sus medidas, dar siguente,
+ en esta pantalla aparecerán RESUMEN de  las dimensiones, dar siguiente. Aparecera pantalla final con el resumen del grupo de medida con sus medida y sus dimensiones,
+ finalizar y apareceran las vistas del cubo o tablas. 
 
 VISTAS DEL ORIGEN DE DATOS o VISTAS DE MEDIDA Y DIMENSIONES 
 
 - Podremos  editar en esta pantalla las Medidas y las Dimensiones. Menú izquierdo. 
-- Se deben  editar las dimensiones clik derecho en   editar o doble clik en la tabla dimension. Aparecera unos lane o pool de diagrama donde hay atributos,  jerarquías y vistas de tabla.  Se deben pasar manualmente los campos deseado  que están en la sección vistas a la sección jerarquía. Clik derecho en el título o la pestaña abierta , guardar.  
+- Se deben  editar las dimensiones clik derecho en   editar o doble clik en la tabla dimension. Aparecera unos lane o pool de diagrama 
+  donde hay atributos,  jerarquías y vistas de tabla.  Se deben pasar manualmente los campos deseado  que están en la sección vistas a la sección jerarquía. 
+  Clik derecho en el título o la pestaña abierta , guardar.  
 
 
 EJECUTAR CUBO
 - debajo de la opción cubo debería aparecer el nombre del nuevo cubo. Clik derecho proceso.  
-- si se ejecuta con error hay que revisar la instancia.   Al inicio  de las opciones aparece el nombre de la instancia del cubo , clik derecho propiedades aparecen tres opciones compilar, depurar, implemnetar. Seleccionar implementar y se deberá cambiar el nombre de la instancia local por la dimensional.   Vaya  a sql server y haga como que se va a  conéctese a  análisis Services,  copie el nombre del servidor . Y luego pegarlo en la opción anterior de implementación  en vez del nombre del servidor local.  Y aceptar. Si hay problema pruebe conectarse al servidor de database engine  y pruebe.
-Prueba de nuevo correr en proceso de ejecutar cubo. 
+- si se ejecuta con error hay que revisar la instancia.   Al inicio  de las opciones aparece el nombre de la instancia del cubo ,
+ clik derecho propiedades aparecen tres opciones compilar, depurar, implemnetar. Seleccionar implementar y se deberá cambiar el nombre de la instancia local por la dimensional.  
+ Vaya  a sql server y haga como que se va a  conéctese a  análisis Services,  copie el nombre del servidor . Y luego pegarlo en la opción anterior de implementación  en vez del nombre del servidor local. 
+ Y aceptar. Si hay problema pruebe conectarse al servidor de database engine  y pruebe.
+ Prueba de nuevo correr el proceso de ejecutar cubo. 
 
 
 BROUSER Y EXPORTAR:  
