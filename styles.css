@@ -194,8 +194,14 @@ ol {
   color: red;
 }
 
+/*Esto es de sql la parte no enumerada*/
 
 
+#codigocubo { 
+font-size: 12px;
+max-width: 600px;
+
+}
 
 
 
