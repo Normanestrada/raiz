@@ -781,6 +781,30 @@ Pasos:
 - debería haber quedado ya fija la imagen
 - ahora solo le damos un copiar pegar al ppt original
 - el pegado deber ser pegar como keep sorce format
+
+<p>REALIZAR CONSULTA   SQL DESDE EXCEL</p>
+
+- Realizar la consulta en  sql server  de la tabla deseada a cómo se va a consumir en excel. 
+- En excel pestaña Datos, obtener datos externos, desde otras fuentes, desde Microsoft querys, clik en nuevo origen de datos, aceptar 
+- Nombre del origen de datos: "cualquiera", tipo de controlador: " sql server"  luego conectar y aparece pestaña donde se deberá colocar 
+  el nombre del servidor a conectarse en este caso la ip a conectarse  en una empresa es el de sql server por lo general. En una PC local
+  CMD o comand prompt luego IPCONFIG , ipv4 adreess es la ip a colocar, una vez colocado , desmarcar la casilla servidor de confianza, 
+  inicio de sesión y contraseña del servidor; Es el usuario creado en sql aparte de la autenticación de Windows es decir sería crear una SA  en caso de no tenerlo .
+  Bueno colocar  el usuario y clave sql server. Aceptar  y luego otra vez aceptar.
+
+- Quedará la pestaña  base y tendría que salir el nombre de la conexión creada. Seleccionarla y dar aceptar, aparece una nueva pestaña dar clik en cancelar, 
+  aparece otra pestaña, decirle que si, aparece otra pantalla de agregar tablas cerrarla en la X , 
+  Aparecera pantalla final, y en la parte superior buscar y dar clik en botón sql. 
+- ahí pegar la consulta deseada es decir el scrip de sql, dar clik en acertar y luego también aceptar. Se verá  la consulta de las tablas  y cerrar en la X la pestaña total 
+  la que dice Microsoft querys.
+
+- Una vez cerrado la ventana , seleccionar pegar en tabla y desde donde, aceptar, 
+  Y aparecerá ya la tabla con las consultas sql.
+
+-  EDITAR LA CONSULTA EN EXCEL 
+  datos, consulta y conexiones, propiedades, aparece pantalla de propiedades de los datos externos, ahí buscar  un botón de forma  de librito, darle clik ,
+  aparecerá pantalla propiedades de la conexión, definición.  En texto del comando se puede editar la consulta de esa tablas.  Aceptar y aceptar.
+
 </pre>
 
   </section>
