@@ -765,6 +765,53 @@ Pasos:
 
  -En la nueva figura creada buscar la base de datos y más tablas si ya hay accesos.  La forma de consultar atravez de linked server es así: select * from nombreBD...clientes;
 
+<p>Tooltip power bi</p>
+
+- Se ocupa para brindar más detalle de un kpi , detalles que no se puede aplican con formatos. 
+  Debe estar creado un kpi o un gráfico en página 1 
+- Crear una nueva página , página 2, en página dos irse al menú derecho superior , formato de página. Imagen de lápiz y papel, luego  Configuración de lienzo, 
+  tipo: información sobre herramientas o tooltip, aparece lienzo pequeño en el área de la pantalla. Es el tamaño standar pero si desea agrandar selecciona dónde dice personalizado y jugar con el tamaño. 
+  Cambiar normbre : en información de página mismos sector de pestañas,  luego en pestaña ver menú superior  del bar, vista de página, ajustar a la página
+
+- Ahora seleccionar cualquier gráfico de recomendacion uno de tipo  tarjeta como
+  Prueba. Y agregarle lo que se quiero visualizar por ejemplo alguna tabla donde haya  nombre del departamento o nombre vendedores, etc, luego aplicar otro gráfico ejemplo tipo tabla o matriz, donde haya 
+  info de lo deseado ejemplo tabla con casos resueltos o no resueltos, etc. En resumen colocar otros gráficos deseado. Uno de anillo de espirales etc. Con info deseada. Y al finalizar clik afuera de la zona de garfico  
+  en pestaña rodillo botón encender tooltip. 
+
+- En objeto visual y general se puede editar según como se desea personalizar. Y listo. 
+  Ahora para que se visualice ese detalle en el kpi principal , nos dirigimos a la página 1 seleccionar el kpi deseado, luego en formato visual, general ,información sobre herramientas o tooltip y seleccionar la página dos 
+  o nombre que se le dió a la página. Ejemplo página detalle. Y listo. 
+- Al pasar el mouse por la zona debería mostrar  todo el detalle grabado en la página dos como una vista previa. Por cada zona aunque solo se haya hecho un zona. Esto debido que power bi funciona con lenguaje automático. 
+- A la página dos o tooltip si le das en la pestaña clik derecho, ocultar no se verá reflejada al momento de compartir en la nube o en report server. 
+
+<p>Como hacer tooltip dinámicos o diferentes no repetitivos</p>
+- Se puede hacer con dax , aplicando nuevas medida ya sea por colores o por forma. 
+ En página tooltips crear primero una de tarjeta y luego un gráfico el segundo colocarlo encima de la tarjeta para luego crear un formato a la tarjeta con formulas ejemplo
+ Cresr una nueva medida con formula con: 
+ is color selected - whitecolor =   if(hasonevalue(dimproduct[color]) , "#fff0 " ,  "#ffffe"  
+ Ver video es complejo. 
+
+- Otra forma en pestaña modelado, parámetro nuevo, campo, aparece pantalla donde se deberá seleccionar los campos deseados de la tabla deseada. Y aceptar se crea una especie de filtro dinámico. 
+  Luego crear un tooltip de la manera acostumbrada y aplicarlo al kpi normal. Cómo posees un filtro dinámico cambiará según lo que selccionas el tooltip
+
+- Otra forma fácil sería crear un tooltips de página para cada gráfico es decir dos gráficos iguales con distintos tooltips.
+
+   
+<p>Botones , imágenes o bookmarks</p>
+
+- pestaña Insertar, botones,  bookmarks, 
+  El más común botón reinicio. Habilitar bookmarks en vista. Si no hay nada ir a inserto y bookmarks, luego de nuevo a vista. Deberá aparecer menú de editaje en la parte derecha que diga bookmarks. 
+  Cambiar nombre o agregar un nuevo. Luego insertar un botón de regreso o reset. Editar ese botón en el menú derecho activar actions, tipo: bookmarks. Nombre: seleccionar el nombre dado. Se puede editar más. 
+
+<p>Formatos de fondo ux bi</p>
+
+- Hacerlas manual en power point o prediseñadas, una vez hecho el diseño deseado deberán ser guardadas como JPG pierde calidad pero reducida en memoria  o PNG  mantiene calidad pero es más pesado en memoria. 
+- para insertar la imagen deseada de fondo es rodillo, page backgraund
+  Y editar al gusto
+Páginas de iconos para presentaciones:
+https://www.flaticon.es/
+https://www.flaticon.com/free-icons/free
+
 </pre>
 
 
