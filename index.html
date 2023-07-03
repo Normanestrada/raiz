@@ -170,22 +170,28 @@ footer {
 
 <head>
     <title>Selección de Contenido</title>
-
-<style>
+    <style>
         li {
-            -webkit-touch-callout: initial;
-            -webkit-user-select: initial;
-            -khtml-user-select: initial;
-            -moz-user-select: initial;
-            -ms-user-select: initial;
-            user-select: initial;
+            user-select: none;
         }
     </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var liElement = document.querySelector('#mysql li');
+            liElement.addEventListener('mousedown', function(event) {
+                event.preventDefault();
+                liElement.classList.add('selectable');
+            });
+            liElement.addEventListener('mouseup', function(event) {
+                liElement.classList.remove('selectable');
+            });
+        });
+    </script>
+
   
 </head>
 <body>
-
-    
+   
 <ol id="mysql">
 
 <li data-before="select <all> <*>
