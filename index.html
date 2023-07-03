@@ -584,9 +584,6 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 
 </ol>
 
-
-<button id="copyButton">Copiar</button>
-
 <script>
   // Función para copiar el contenido al portapapeles
   function copyToClipboard(text) {
@@ -598,18 +595,18 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
     document.body.removeChild(textarea);
   }
 
-  // Obtener el botón de copiar por su ID
-  const copyButton = document.getElementById('copyButton');
+  // Obtener el elemento de lista por su ID
+  const mysqlListItem = document.querySelector('#mysql li');
 
-  // Agregar un event listener para el clic en el botón de copiar
-  copyButton.addEventListener('click', function() {
-    const mysqlCode = document.querySelector('#mysql li').textContent.trim();
-    copyToClipboard(mysqlCode);
-    alert('El código se ha copiado al portapapeles.');
+  // Agregar un event listener para el evento de selección de texto
+  mysqlListItem.addEventListener('mouseup', function() {
+    const selectedText = window.getSelection().toString().trim();
+    if (selectedText !== '') {
+      copyToClipboard(selectedText);
+      alert('El texto seleccionado se ha copiado al portapapeles.');
+    }
   });
 </script>
-
-
 
     
 
