@@ -10,7 +10,16 @@
 
   <!--este no muy optimizado para móvil<link rel="stylesheet" href=styles.css>-->
 
-
+<style>
+        li {
+            -webkit-touch-callout: initial;
+            -webkit-user-select: initial;
+            -khtml-user-select: initial;
+            -moz-user-select: initial;
+            -ms-user-select: initial;
+            user-select: initial;
+        }
+    </style>
     
 
   </head>
@@ -584,24 +593,6 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 
 </ol> 
     
-
-<script>
-function enableTextSelection() {
-  // Obtén todos los elementos en la página
-  const elements = document.querySelectorAll('*');
-  
-  // Recorre todos los elementos y habilita la selección de texto
-  elements.forEach(function(element) {
-    element.style.userSelect = 'text';
-    element.style.webkitUserSelect = 'text';
-    element.style.MozUserSelect = 'text';
-    element.style.msUserSelect = 'text';
-  });
-}
-
-// Llama a la función para habilitar la selección de texto
-enableTextSelection();
-</script>
 
     
 
