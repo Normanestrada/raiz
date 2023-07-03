@@ -585,6 +585,34 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 </ol>
 
 
+<button id="copyButton">Copiar</button>
+
+<script>
+  // Función para copiar el contenido al portapapeles
+  function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  // Obtener el botón de copiar por su ID
+  const copyButton = document.getElementById('copyButton');
+
+  // Agregar un event listener para el clic en el botón de copiar
+  copyButton.addEventListener('click', function() {
+    const mysqlCode = document.querySelector('#mysql li').textContent.trim();
+    copyToClipboard(mysqlCode);
+    alert('El código se ha copiado al portapapeles.');
+  });
+</script>
+
+
+
+    
+
   </section>
   <section id="powerbi" class="hidden">
     <h2>POWER BI</h2>
