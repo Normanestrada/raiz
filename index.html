@@ -169,7 +169,8 @@ footer {
 <p>A continuación las consultas select mas usadas: SQL</p>
 
 <head>
-    <title>Selección de Contenido</title>
+
+<title>Selección de Contenido</title>
     <style>
         li {
             user-select: none;
@@ -180,14 +181,14 @@ footer {
             var liElement = document.querySelector('#mysql li');
             liElement.addEventListener('mousedown', function(event) {
                 event.preventDefault();
-                liElement.classList.add('selectable');
+                liElement.style.userSelect = 'text';
             });
             liElement.addEventListener('mouseup', function(event) {
-                liElement.classList.remove('selectable');
+                liElement.style.userSelect = 'none';
             });
         });
     </script>
-
+  
   
 </head>
 <body>
