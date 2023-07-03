@@ -584,31 +584,24 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 
 </ol> 
     
+
 <script>
-// Obtén el elemento por su ID
-const contentElement = document.getElementById('content');
-
-// Agrega un evento al hacer clic para seleccionar el contenido
-contentElement.addEventListener('click', function() {
-  selectText(contentElement);
-});
-
-// Función para seleccionar el texto dentro de un elemento
-function selectText(element) {
-  if (document.body.createTextRange) { // Para navegadores antiguos que no admiten el método select()
-    const range = document.body.createTextRange();
-    range.moveToElementText(element);
-    range.select();
-  } else if (window.getSelection) { // Para navegadores modernos
-    const selection = window.getSelection();
-    const range = document.createRange();
-    range.selectNodeContents(element);
-    selection.removeAllRanges();
-    selection.addRange(range);
-  }
+function enableTextSelection() {
+  // Obtén todos los elementos en la página
+  const elements = document.querySelectorAll('*');
+  
+  // Recorre todos los elementos y habilita la selección de texto
+  elements.forEach(function(element) {
+    element.style.userSelect = 'text';
+    element.style.webkitUserSelect = 'text';
+    element.style.MozUserSelect = 'text';
+    element.style.msUserSelect = 'text';
+  });
 }
-</script>
 
+// Llama a la función para habilitar la selección de texto
+enableTextSelection();
+</script>
 
     
 
