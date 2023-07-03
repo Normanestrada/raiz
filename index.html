@@ -584,29 +584,26 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 
 </ol>
 
-<script>
-  // Función para copiar el contenido al portapapeles
-  function copyToClipboard(text) {
-    const textarea = document.createElement('textarea');
-    textarea.value = text;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-  }
 
-  // Obtener el elemento de lista por su ID
-  const mysqlListItem = document.querySelector('#mysql li');
+const mysqlListItem = document.querySelector('#mysql li');
 
-  // Agregar un event listener para el evento de selección de texto
-  mysqlListItem.addEventListener('mouseup', function() {
-    const selectedText = window.getSelection().toString().trim();
-    if (selectedText !== '') {
-      copyToClipboard(selectedText);
-      alert('El texto seleccionado se ha copiado al portapapeles.');
-    }
-  });
-</script>
+
+mysqlListItem.addEventListener('click', function() {
+  const textToCopy = mysqlListItem.getAttribute('data-before');
+  copyToClipboard(textToCopy);
+  alert('El texto se ha copiado al portapapeles.');
+});
+
+
+function copyToClipboard(text) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+}
+
 
     
 
