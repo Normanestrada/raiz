@@ -585,27 +585,31 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 </ol> 
     
 <script>
+// Obtén el elemento por su ID
+const contentElement = document.getElementById('content');
 
-const mysqlListItem = document.querySelector('#mysql li');
-
-
-mysqlListItem.addEventListener('click', function() {
-  const textToCopy = mysqlListItem.getAttribute('data-before');
-  copyToClipboard(textToCopy);
-  alert('El texto se ha copiado al portapapeles.');
+// Agrega un evento al hacer clic para seleccionar el contenido
+contentElement.addEventListener('click', function() {
+  selectText(contentElement);
 });
 
-
-function copyToClipboard(text) {
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
+// Función para seleccionar el texto dentro de un elemento
+function selectText(element) {
+  if (document.body.createTextRange) { // Para navegadores antiguos que no admiten el método select()
+    const range = document.body.createTextRange();
+    range.moveToElementText(element);
+    range.select();
+  } else if (window.getSelection) { // Para navegadores modernos
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
 }
-
 </script>
+
+
     
 
   </section>
