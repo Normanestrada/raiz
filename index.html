@@ -170,24 +170,6 @@ footer {
 
 <head>
 
-<title>Selección de Contenido</title>
-    <style>
-        li {
-            user-select: none;
-        }
-    </style>
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var liElement = document.querySelector('#mysql li');
-            liElement.addEventListener('mousedown', function(event) {
-                event.preventDefault();
-                liElement.style.userSelect = 'text';
-            });
-            liElement.addEventListener('mouseup', function(event) {
-                liElement.style.userSelect = 'none';
-            });
-        });
-    </script>
   
   
 </head>
