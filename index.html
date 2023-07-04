@@ -175,7 +175,7 @@ footer {
 </head>
 <body>
   
-<pre
+
 <ol id="mysql">
 
 <li>data-before="select <all> <*>
@@ -190,6 +190,19 @@ from <tabla> <as alias>
 <group by campo>
 <having condicion>
 <order by campo asc|desc>;" data-after=" Orden lógico extrictura"></li>
+  
+<li>data-before="select <all> <*>
+<distinct>
+<top valor[percent ]>
+<alias.com>
+<as campo>
+<into tabla_destino>
+from <tabla> <as alias>
+<inner|left|right|cross join>
+<where condicion>
+<group by campo>
+<having condicion>
+<order by campo asc|desc>;<Orden lógico extrictura"></li>
 
 
   <li data-before="use nombre_base;" data-after=" basica"></li>
@@ -592,7 +605,7 @@ ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa
 
 </ol> 
 
-</pre>
+
     
 
   </section>
