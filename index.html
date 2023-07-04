@@ -193,24 +193,25 @@ from <tabla> <as alias>
   
   
 
-  <li>use nombre_base [basica a la base]</li>
-  <li>select * from.dbo.tblClientes [basica de tabla]</li>
-  <li>delete from tabla [borrar datos de tabla]</li>
-  <li data-before="drop table nombre_tabla;" data-after=" eliminar tabla"></li>
-  <li data-before="drop database nombre_base;" data-after=" eliminar una base de datos"></li>
-  <li data-before="select columna1, columna2 from tabla;" data-after=" Consulta de varias columnas"></li>
-  <li data-before="select * from table WHERE ColumnaID=1;" data-after=" Consulta condicionada where numero" ></li>
-  <li data-before="select * from table WHERE Country='Mexico';" data-after=" Consulta condicionada where texto"></li>
-  <li data-before="select first_name,last_name from Customers where not last_name='Reinhardt';" data-after=" Consulta condicionada not where"></li>
-  <li data-before="delete from table_name;" data-after=" borra solo los registros  mantiene las columnas y la tabla"></li>
-  <li data-before="Truncate from table;" data-after="borra todos los datos de la tabla sin condición"></li>
-  <li data-before="alter table table_name;" data-after=" borrado permanente"></li>
-  <li data-before="drop column column_name;" data-after="borra la columna de una tabla permanentemente"></li>
-  <li data-before="update Tabla set columna_afectada = 'nuevo_dato' where ID=1;" data-after=" cambia o actualiza los datos o valores internos de cada columna de una tabla por id"></li>
-  <li data-before="update tabla set Columna_afectada='Peru' where Columna_afectada='paris';" data-after=" cambia masivamente los datos cuidado"></li>
-  <li data-before="sp_rename 'mi_tabla.nombre_antiguo', 'nombre_nuevo', 'COLUMN' ;" data-after=" cambia el nombre de una columna"></li>
-  <li data-before="sp_rename 'mi_tabla', 'nuevo_nombre';" data-after=" cambia el nombre de una tabla"></li>
-  <li data-before="ALTER DATABASE mi_base_datos MODIFY NAME = nuevo_nombre_base_datos;" data-after=" Cambia el nombre  de una base datos"></li>
+<li>use nombre_base [basica a la base]</li>
+<li>select * from.dbo.tblClientes [basica de tabla]</li>
+<li>delete from tabla [borrar datos de tabla]</li>
+<li>drop table nombre_tabla; -- eliminar tabla</li>
+  
+<li>drop database nombre_base; -- eliminar una base de datos</li>
+<li>select columna1, columna2 from tabla; -- Consulta de varias columnas</li>
+<li>select * from table WHERE ColumnaID=1; -- Consulta condicionada where numero</li>
+<li>select * from table WHERE Country='Mexico'; -- Consulta condicionada where texto</li>
+<li>select first_name,last_name from Customers where not last_name='Reinhardt'; -- Consulta condicionada not where</li>
+<li>delete from table_name; -- borra solo los registros mantiene las columnas y la tabla</li>
+<li>Truncate from table; -- borra todos los datos de la tabla sin condición</li>
+<li>alter table table_name; -- borrado permanente</li>
+<li>drop column column_name; -- borra la columna de una tabla permanentemente</li>
+<li>update Tabla set columna_afectada = 'nuevo_dato' where ID=1; -- cambia o actualiza los datos o valores internos de cada columna de una tabla por id</li>
+<li>update tabla set Columna_afectada='Peru' where Columna_afectada='paris'; -- cambia masivamente los datos cuidado</li>
+<li>sp_rename 'mi_tabla.nombre_antiguo', 'nombre_nuevo', 'COLUMN' ; -- cambia el nombre de una columna</li>
+<li>sp_rename 'mi_tabla', 'nuevo_nombre'; -- cambia el nombre de una tabla</li>
+<li>ALTER DATABASE mi_base_datos MODIFY NAME = nuevo_nombre_base_datos; -- Cambia el nombre de una base de datos</li>
 
 <p>Creación de las tablas y tipo de dato: SQL</p>
 
