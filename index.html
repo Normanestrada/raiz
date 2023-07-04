@@ -216,383 +216,244 @@ from <tabla> <as alias>
   
 <p>Creación de las tablas y tipo de dato: SQL</p>
 
-<li data-before="Create table bdvebtas(
-Codigo1 Char (5)  not null primary key identity(100,1)
-Código2 varchar (15) not null default 'no registrado
-Codigo3 varchar(16) no null default '00000000000000000);" data-after=" basica"></li>
+ <li>Create table bdvebtas(
+Codigo1 Char (5) not null primary key identity(100,1),
+Código2 varchar (15) not null default 'no registrado',
+Codigo3 varchar(16) not null default '00000000000000000); [basica]</li>
 
-<li data-before="Create table bdvebtas(
-Codigo1 Char (5)  not null primary key identity(100,1)
-Código2 varchar (15) not null default 'no registrado
-Codigo3 varchar(16) no null check (codigo3   between 1 and 100),
-Codigo4 varchar(16) no null check (codigo4  >0),
-Codigo5 varchar(16) no null check (codigo5   in ('caja', 'bolsas, 'maletas'));" data-after=" basica"></li>
+<li>Create table bdvebtas(
+Codigo1 Char (5) not null primary key identity(100,1),
+Código2 varchar (15) not null default 'no registrado',
+Codigo3 varchar(16) not null check (codigo3 between 1 and 100),
+Codigo4 varchar(16) not null check (codigo4 >0),
+Codigo5 varchar(16) not null check (codigo5 in ('caja', 'bolsas', 'maletas')); [basica]</li>
 
-<li data-before="Alter table bdvebtas
+<li>Alter table bdvebtas
 Add Constraint chk_cualquiernombre
-check (codigo3   between 1 and 100);" data-after="añade restricción a una tabla ya existente ver anterior"></li>
+check (codigo3 between 1 and 100); [añade restricción a una tabla ya existente ver anterior]</li>
 
-<li data-before="SP_helpConstraint bdvebtas;" data-after=" consulta restricciones"></li>
+<li>SP_helpConstraint bdvebtas; [consulta restricciones]</li>
 
-<li data-before="Create table bdvebtas(
-Codigo1 Char (5)  not null primary key identity(100,1)
-Código2 varchar (15) not null Unique;" data-after=" basica"></li>
+<li>Create table bdvebtas(
+Codigo1 Char (5) not null primary key identity(100,1),
+Código2 varchar (15) not null Unique; [basica]</li>
 
-<li data-before="Alter table bdvebtas
+<li>Alter table bdvebtas
 Add Constraint Uni_cualquiernombre
-Unique(código2);" data-after=" añade una restricción de una tabla ya existente ver anterior"></li>
+Unique(código2); [añade una restricción de una tabla ya existente ver anterior]</li>
 
-<li data-before="ALTER TABLE bdvebtas
-ALTER COLUMN Codigo1 VARCHAR(5) NULL;" data-after=" modifica o cambia el tipo de dato de una tabla"></li>
+<li>ALTER TABLE bdvebtas
+ALTER COLUMN Codigo1 VARCHAR(5) NULL; [modifica o cambia el tipo de dato de una tabla]</li>
 
-<li data-before="ALTER TABLE bdvebtas
-DROP CONSTRAINT PK_bdvebtas;" data-after=" elimina el tipo de dato primario"></li>
+<li>ALTER TABLE bdvebtas
+DROP CONSTRAINT PK_bdvebtas; [elimina el tipo de dato primario]</li>
 
-<li data-before="ALTER TABLE bdvebtas
-ADD CONSTRAINT PK_bdvebtas_new PRIMARY KEY (Codigo2);" data-after=" añade primary key a una tabla existente"></li>
+<li>ALTER TABLE bdvebtas
+ADD CONSTRAINT PK_bdvebtas_new PRIMARY KEY (Codigo2); [añade primary key a una tabla existente]</li>
 
-<li data-before="CREATE TABLE OtraTabla (
+<li>CREATE TABLE OtraTabla (
   Id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
   Nombre VARCHAR(50) NOT NULL,
   Codigo2 VARCHAR(15) NOT NULL,
   CONSTRAINT FK_OtraTabla_bdvebtas
     FOREIGN KEY (Codigo2)
     REFERENCES bdvebtas(Codigo2)
-);" data-after=" se aplica clave foránea o secundaria cuando se referencia a otra tabla existente"></li>
+); [se aplica clave foránea o secundaria cuando se referencia a otra tabla existente]</li>
 
-<li data-before="ALTER TABLE OtraTabla DROP CONSTRAINT FK_OtraTabla_bdvebtas;" data-after=" eliminar tipo de dato foraneo"></li>
+<li>ALTER TABLE OtraTabla DROP CONSTRAINT FK_OtraTabla_bdvebtas; [eliminar tipo de dato foraneo]</li>
 
-<li data-before="ALTER TABLE TablaExistente
+<li>ALTER TABLE TablaExistente
 ADD CONSTRAINT FK_TablaExistente_bdvebtas
 FOREIGN KEY (Codigo2)
-REFERENCES bdvebtas(Codigo2);" data-after=" aplica tipo de datos foráneo a partir de dos tablas existente"></li>
+REFERENCES bdvebtas(Codigo2); [aplica tipo de datos foráneo a partir de dos tablas existente]</li>
 
-<li data-before="INSERT INTO Customers (CustomerName, City, Country)
-VALUES ('Cardinal', 'Stavanger', 'Norway');" data-after=" Ingresa o registra datos a una tabla"></li>
+<li>INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway'); [Ingresa o registra datos a una tabla]</li>
 
-<li data-before="INSERT INTO bdvebtas (Codigo1, Codigo2)
-VALUES ('A1234', 'Producto1'), ('B5678', 'Producto2'), ('C9101', 'Producto3');" data-after=" Ingresa o registra datos a una tabla"></li>
+<li>INSERT INTO bdvebtas (Codigo1, Codigo2)
+VALUES ('A1234', 'Producto1'), ('B5678', 'Producto2'), ('C9101', 'Producto3'); [Ingresa o registra datos a una tabla]</li>
 
-<li data-before="UPDATE nombre_tabla
+<li>UPDATE nombre_tabla
 SET campo2 = valor2, campo3 = valor3
-WHERE número_id = 1;" data-after=" modifica un dato existente condicionado where con id"></li>
+WHERE número_id = 1; [modifica un dato existente condicionado where con id]</li>
 
-<li data-before="DELETE FROM tabla_ejemplo WHERE numero_id = 1;" data-after=" borra un dato existente condicionado where con id cuidado"></li>
+<li>DELETE FROM tabla_ejemplo WHERE numero_id = 1; [borra un dato existente condicionado where con id cuidado]</li>
+
+  
+
 
 <p>Consultas join tablas relacionales:</p>
 
-<li data-before="Select* from  tablapadre
+<li>Select* from tablapadre
 inner join tablahijo
-on tablapadre.idxx = tablahijo.idxx;" data-after=" Une dos tablas siempre y cuando el campo de unión o id son iguales en ambos/también en tabla foráneas y primaria"></li>
+on tablapadre.idxx = tablahijo.idxx; 
+[Une dos tablas siempre y cuando el campo de unión o id son iguales en ambos/también en tabla foráneas y primaria]</li>
 
-<li data-before="Select* from  tablapadre1
+<li>Select* from tablapadre1
 inner join tablahijo
 on tablapadre.idxx = tablahijo.idxx
 
 inner join tablapadre2
-on tablapadre2.idxxx = tablahijo.idxx;" data-after=" Une tres tablas siempre y cuando el campo de unión o id son iguales en ambos/también en tabla foráneas y primaria"></li>
+on tablapadre2.idxxx = tablahijo.idxx; 
+[Une tres tablas siempre y cuando el campo de unión o id son iguales en ambos/también en tabla foráneas y primaria]</li>
 
-<li data-before="Select campo1, campo2,campo3 from  tablapadre1
+<li>Select campo1, campo2, campo3 from tablapadre1
 inner join tablahijo
 on tablapadre.idxx = tablahijo.idxx
 inner join tablapadre2
-on tablapadre2.idxxx = tablahijo.idxx;" data-after=" Une tablas con columnas especificas"></li>
+on tablapadre2.idxxx = tablahijo.idxx; [Une tablas con columnas especificas]</li>
 
-
-<li data-before="Select campo1, campo2, tabla1.campo3, tabla2.campo3 tabla.columna from  tablapadre1
+<li>Select campo1, campo2, tabla1.campo3, tabla2.campo3, tabla.columna from tablapadre1
 inner join tablahijo
 on tablapadre.idxx = tablahijo.idxx
 inner join tablapadre2
-on tablapadre2.idxxx = tablahijo.idxx;" data-after=" Une tablas con columnas especifica y cuando las tablas poseen campos con  nombre igual seleccionar  tabla.campo"></li>
+on tablapadre2.idxxx = tablahijo.idxx;
+  [Une tablas con columnas especifica y cuando las tablas poseen campos con nombre igual seleccionar tabla.campo]</li>
 
-
-<li data-before="Select* from  tablapadre1
+<li>Select* from tablapadre1
 inner join tablahijo
 on tablapadre.idxx = tablahijo.idxx
 inner join tablapadre2
 on tablapadre2.idxxx = tablahijo.idxx
 inner join tablahijo
-on tablapadre2.id =tablahijo.id;" data-after=" Une cuatro tablas"></li>
+on tablapadre2.id =tablahijo.id; [Une cuatro tablas]</li>
 
-<li data-before="SELECT campo1,campo2,campo3 from ( select* from dbo.alumnos) as tabla1,
-( select* from dbo.materias) as tabla2
- where tabla1.id_alum=tabla2.id_alum;" data-after=" Select anidados o subconsulta de dos tablas"></li>
+<li>SELECT campo1, campo2, campo3 from (select* from dbo.alumnos) as tabla1,
+(select* from dbo.materias) as tabla2
+where tabla1.id_alum = tabla2.id_alum; [Select anidados o subconsulta de dos tablas]</li>
 
-<li data-before="Select character.name, actor.name from character 
-INNER JOIN character_actor ON character.id= character_actor.character_id 
+<li>Select character.name, actor.name from character 
+INNER JOIN character_actor ON character.id = character_actor.character_id 
 INNER JOIN actor 
-ON character_actor.actor_id= actor.id;" data-after=" otra manera de join en tres tablas"></li>
- 
-<li data-before="SELECT character.name, tv_show.name
+ON character_actor.actor_id = actor.id; [Otra manera de join en tres tablas]</li>
+
+<li>SELECT character.name, tv_show.name
 FROM character
 INNER JOIN character_tv_show
 ON character.id = character_tv_show.character_id
 INNER JOIN tv_show
-ON character_tv_show.tv_show_id = tv_show.id WHERE character.name= 'Doogie Howser' and tv_show.name= 'Doogie Howser, M.D.';" data-after=" join con where"></li>
+ON character_tv_show.tv_show_id = tv_show.id WHERE character.name = 'Doogie Howser' and tv_show.name = 'Doogie Howser, M.D.'; [Join con where]</li>
+
 
 <p>Subconsultas o anidadas</p>
 
-<li data-before="SELECT c.name, s.sales
+<li>SELECT c.name, s.sales
 FROM (SELECT customer, SUM(sales) AS sales FROM sales GROUP BY customer) s
-JOIN customers c ON s.customer = c.id;" data-after=" basica"></li>
+JOIN customers c ON s.customer = c.id; [basica]</li>
 
-<li data-before="SELECT p.name, s.sales
+<li>SELECT p.name, s.sales
 FROM (SELECT product, SUM(sales) AS sales FROM sales GROUP BY product) s
-JOIN products p ON s.product = p.id;" data-after=" basica"></li>
+JOIN products p ON s.product = p.id; [basica]</li>
 
-<li data-before="SELECT d.name, e.employees
+<li>SELECT d.name, e.employees
 FROM (SELECT department, COUNT(*) AS employees FROM employees GROUP BY department) e
-JOIN departments d ON e.department = d.id;" data-after=" basica"></li>
+JOIN departments d ON e.department = d.id; [basica]</li>
 
-<li data-before="SELECT c.name, AVG(s.sales) AS avg_sales
+<li>SELECT c.name, AVG(s.sales) AS avg_sales
 FROM (SELECT customer, sales FROM sales) s
 JOIN customers c ON s.customer = c.id
-GROUP BY c.name;" data-after=" basica"></li>
+GROUP BY c.name; [basica]</li>
 
-<li data-before="SELECT d.name, e.employee_name
+<li>SELECT d.name, e.employee_name
 FROM (SELECT department, employee_name FROM employees) e
-INNER JOIN departments d ON e.department = d.id;" data-after=" basica"></li>
+INNER JOIN departments d ON e.department = d.id; [basica]</li>
+
+  
 
 <p>, Operadores not, and , like, IN, distinc,beetween</p>
 
+<li>SELECT * FROM Customers WHERE country LIKE 'usa%;' [like]</li>
 
- <li data-before="Select * FROM Customers WHERE country LIKE 'usa%;" data-after=" like"></li>
+<li>SELECT first_name,last_name from Customers where not last_name='Reinhardt' and age >='22'; [Not y and]</li>
 
+<li>SELECT * FROM Customers WHERE country IN('USA', 'UK')
+ORDER BY country DESC; [IN]</li>
 
- <li data-before="SELECT first_name,last_name from Customers where not last_name='Reinhardt' and age >='22';" data-after=" Not y and"></li>
+<li>SELECT DISTINCT country FROM Customers WHERE country IS NOT NULL; [not null]</li>
 
+<li>SELECT * FROM Customers WHERE age BETWEEN 28 AND 31; [between]</li>
 
- <li data-before="SELECT * FROM Customers WHERE country IN('USA', 'UK')
-ORDER BY country DESC;" data-after=" IN"></li>
+<li>SELECT * FROM Customers WHERE customer_id = 5 AND age BETWEEN 22 AND 31; [between]</li>
 
+<li>SELECT DISTINCT ID_Proveedor FROM Productos; [distinct]</li>
 
- <li data-before="SELECT DISTINCT  country FROM Customers WHERE country IS NOT NULL;" data-after=" not null"></li>
-
-
- <li data-before="SELECT * FROM  Customers  WHERE age BETWEEN 28 AND 31;" data-after=" between"></li>
-
-
- <li data-before="SELECT * FROM Customers WHERE customer_id = 5 AND age BETWEEN 22 AND 31;" data-after=" between"></li>
-
- <li data-before="SELECT DISTINCT ID_Proveedor FROM Productos;" data-after=" distinct"></li>
 
 <p>, Funciones de agregados </p>
 
-<li data-before="SELECT SUM(Precio_Venta) FROM Ventas;" data-after=" sum"></li>
-<li data-before="SELECT AVG(Precio_Venta) FROM Ventas;" data-after=" avg"></li>
-<li data-before="SELECT COUNT(*) FROM Ventas;" data-after=" count"></li>
-<li data-before="SELECT MAX(Precio_Venta) FROM Ventas;" data-after=" max"></li>
-<li data-before="SELECT MIN(Precio_Venta) FROM Ventas;" data-after=" min"></li>
-<li data-before="SELECT STDEV(Precio_Venta) FROM Ventas;" data-after=" stdev"></li>
-<li data-before="SELECT VAR(Precio_Venta) FROM Ventas;" data-after=" var"></li>
-<li data-before="SELECT GROUP_CONCAT(ID_Producto) FROM Ventas;" data-after=" gc"></li>
-<li data-before="SELECT FIRST(Precio_Venta) FROM Ventas;" data-after=" first"></li>
-<li data-before="SELECT (numero1 - numero2) / 5 AS resultado FROM numeros;" data-after=" resta y divicion"></li>
+<li>SELECT SUM(Precio_Venta) FROM Ventas; [sum]</li>
+<li>SELECT AVG(Precio_Venta) FROM Ventas; [avg]</li>
+<li>SELECT COUNT(*) FROM Ventas; [count]</li>
+<li>SELECT MAX(Precio_Venta) FROM Ventas; [max]</li>
+<li>SELECT MIN(Precio_Venta) FROM Ventas; [min]</li>
+<li>SELECT STDEV(Precio_Venta) FROM Ventas; [stdev]</li>
+<li>SELECT VAR(Precio_Venta) FROM Ventas; [var]</li>
+<li>SELECT GROUP_CONCAT(ID_Producto) FROM Ventas; [gc]</li>
+<li>SELECT FIRST(Precio_Venta) FROM Ventas; [first]</li>
+<li>SELECT (numero1 - numero2) / 5 AS resultado FROM numeros; [resta y division]</li>
 
-<li data-before="SELECT * FROM productos WHERE nombre_producto = 'Camisa';" data-after=" igual"></li>
-<li data-before="SELECT * FROM empleados WHERE salario < 50000;" data-after=" menor"></li>
-<li data-before="SELECT * FROM ventas WHERE monto_total > 1000;" data-after=" mayor"></li>
-<li data-before="SELECT * FROM empleados WHERE salario <= 50000;" data-after=" menor o igual"></li>
-<li data-before="SELECT * FROM ventas WHERE monto_total >= 1000;" data-after=" mayor o igual"></li>
-<li data-before=" SELECT * FROM productos WHERE nombre_producto <> 'Camisa';" data-after=" diferete"></li>
-<li data-before="SELECT * FROM productos WHERE nombre_producto != 'Camisa';" data-after=" especial"></li>
-<li data-before="SELECT * FROM empleados WHERE salario !< 50000;" data-after=" especial"></li>
-<li data-before="SELECT * FROM ventas WHERE monto_total !> 1000;" data-after=" especial"></li>
+<li>SELECT * FROM productos WHERE nombre_producto = 'Camisa'; [igual]</li>
+<li>SELECT * FROM empleados WHERE salario < 50000; [menor]</li>
+<li>SELECT * FROM ventas WHERE monto_total > 1000; [mayor]</li>
+<li>SELECT * FROM empleados WHERE salario <= 50000; [menor o igual]</li>
+<li>SELECT * FROM ventas WHERE monto_total >= 1000; [mayor o igual]</li>
+<li>SELECT * FROM productos WHERE nombre_producto <> 'Camisa'; [diferente]</li>
+<li>SELECT * FROM productos WHERE nombre_producto != 'Camisa'; [especial]</li>
+<li>SELECT * FROM empleados WHERE salario !< 50000; [especial]</li>
+<li>SELECT * FROM ventas WHERE monto_total !> 1000; [especial]</li>
+
 
 
 <p>Funciones de agregados en select anidado</p>
-<li data-before="SELECT COUNT(DISTINCT Country) FROM Customers;" data-after=" especial count"></li>
-
-<li data-before="SELECT Count(*) AS nuevo_campo
-FROM (SELECT DISTINCT Country FROM Customers);" data-after=" especial distict"></li>
-
-<li data-before="SELECT  *FROM Customers where first_name='John' and last_name='Doe' and age= 31;" data-after=" especial and"></li>
-
-<li data-before="SELECT first_name,last_name  FROM Customers where first_name='John' or last_name='Doe' or age= 31;" data-after=" especial or"></li>
-
-<li data-before="SELECT AVG(Age)
-FROM Employees
-WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE Name = 'Sales');" data-after=" especial where"></li>
-
-<li data-before="SELECT Name
-FROM Employees
-WHERE Salary > (SELECT AVG(Salary) FROM Employees);" data-after=" especial avg"></li>
-
-<li data-before="SELECT Name
-FROM Departments
-WHERE NOT EXISTS (SELECT  FROM Employees
-                  WHERE DepartmentID =1 Departments.DepartmentID AND Age <= 30);;" data-after=" especial Not exist"></li>
+ 
+<li>SELECT COUNT(DISTINCT Country) FROM Customers; [especial count]</li>
+<li>SELECT COUNT(*) AS nuevo_campo FROM (SELECT DISTINCT Country FROM Customers); [especial distinct]</li>
+<li>SELECT * FROM Customers WHERE first_name='John' AND last_name='Doe' AND age=31; [especial AND]</li>
+<li>SELECT first_name, last_name FROM Customers WHERE first_name='John' OR last_name='Doe' OR age=31; [especial OR]</li>
+<li>SELECT AVG(Age) FROM Employees WHERE DepartmentID = (SELECT DepartmentID FROM Departments WHERE Name = 'Sales'); [especial WHERE]</li>
+<li>SELECT Name FROM Employees WHERE Salary > (SELECT AVG(Salary) FROM Employees); [especial AVG]</li>
+<li>SELECT Name FROM Departments WHERE NOT EXISTS (SELECT * FROM Employees WHERE DepartmentID = Departments.DepartmentID AND Age <= 30); [especial NOT EXISTS]</li>
+<li>SELECT department, (SELECT SUM(salary) FROM employees WHERE department = e.department) AS total_salary FROM employees e GROUP BY department; [especial SUM]</li>
+<li>SELECT year, product, (SELECT SUM(sales) FROM sales WHERE year = s.year AND product = s.product) AS total_sales FROM sales s GROUP BY year, product; [especial SUM]</li>
 
 
-<li data-before="SELECT department, (SELECT SUM(salary) FROM employees WHERE department = e.department) AS total_salary
-FROM employees e
-GROUP BY department;" data-after=" especial sum"></li>
-
-<li data-before="SELECT year, product, (SELECT SUM(sales) FROM sales WHERE year = s.year AND product = s.product) AS total_sales
-FROM sales s
-GROUP BY year, product;" data-after=" especial sum"></li>
-
+  
 
 <p>Procedimientos almacenados, Trigguer, vistas</p>
 
-<li data-before="CREATE PROCEDURE Nombre_Procedimiento
-  @Parametro1 TipoDato,
-  @Parametro2 TipoDato
-AS
-BEGIN
-  --Código del procedimiento aquí
-  SELECT columna1, columna2
-  FROM Nombre_Tabla
-  WHERE columna3 = @Parametro1 AND columna4 = @Parametro2 
-END;" data-after=" Encapsula consultas frecuentes pero compleja lógica de negocio personalizable por multi usuario optimizando"></li>
-
-<li data-before="CREATE VIEW Nombre_Vista AS
-SELECT columna1, columna2, columna3
-FROM Nombre_Tabla
-WHERE columna4 = 'Valor_Deseado';" data-after=" Encapsula vistas sencillas muy utilizadas optimiza"></li>
+<li>CREATE PROCEDURE Nombre_Procedimiento @Parametro1 TipoDato, @Parametro2 TipoDato AS BEGIN --Código del procedimiento aquí SELECT columna1, columna2 FROM Nombre_Tabla WHERE columna3 = @Parametro1 AND columna4 = @Parametro2 END; [Encapsula consultas frecuentes pero compleja lógica de negocio personalizable por multi usuario optimizando]</li>
+<li>CREATE VIEW Nombre_Vista AS SELECT columna1, columna2, columna3 FROM Nombre_Tabla WHERE columna4 = 'Valor_Deseado'; [Encapsula vistas sencillas muy utilizadas optimiza]</li>
+<li>CREATE TRIGGER Nombre_Trigger ON Nombre_Tabla AFTER INSERT, UPDATE, DELETE AS BEGIN --Código del trigger aquí INSERT INTO Log_Tabla (Fecha, Operacion) VALUES (GETDATE(), 'Se realizó una operación en Nombre_Tabla') END; [disparador automático al inserción, eliminación, actualización]</li>
+<li>DROP PROCEDURE Nombre_Procedimiento; [borrar procedure]</li>
+<li>DROP VIEW Nombre_Vista; [borrar vista]</li>
+<li>DROP TRIGGER Nombre_Trigger ON Nombre_Tabla; [borrar trigger]</li>
+<li>EXEC sp_rename 'Nombre_Procedimiento', 'Nuevo_Nombre_Procedimiento'; [cambia el nombre]</li>
+<li>EXEC sp_rename 'Nombre_Vista', 'Nuevo_Nombre_Vista'; [cambia el nombre]</li>
+<li>EXEC sp_rename 'Nombre_Tabla.Nombre_Trigger', 'Nuevo_Nombre_Trigger', 'OBJECT'; [cambia el nombre]</li>
+<li>ALTER TRIGGER tr_upd_employee ON employee AFTER UPDATE AS BEGIN -- Cuerpo del trigger modificado END; [modifica el cuerpo del trigger]</li>
+<li>ALTER VIEW v_employee_data AS SELECT emp_id, emp_name, emp_salary FROM employee WHERE emp_status = 'active'; [modifica el cuerpo de la vista]</li> 
 
 
-<li data-before="CREATE TRIGGER Nombre_Trigger
-ON Nombre_Tabla
-AFTER INSERT, UPDATE, DELETE
-AS
-BEGIN
-  --Código del trigger aquí
-  INSERT INTO Log_Tabla (Fecha, Operacion)
-  VALUES (GETDATE(), 'Se realizó una operación en Nombre_Tabla')
-END;" data-after=" disparador automatico al inserción,eliminación,actualizacion "></li>
-
-
-<li data-before="DROP PROCEDURE Nombre_Procedimiento;" data-after=" borrar procedure"></li>
-
-<li data-before="DROP VIEW Nombre_Vista;" data-after=" borrar vistas"></li>
-
-<li data-before="DROP TRIGGER Nombre_Trigger
-ON Nombre_Tabla;" data-after=" borrar Trigguer"></li>
-
-<li data-before="EXEC sp_rename 'Nombre_Procedimiento', 'Nuevo_Nombre_Procedimiento';" data-after=" cambia el nombre"></li>
-
-<li data-before="EXEC sp_rename 'Nombre_Vista', 'Nuevo_Nombre_Vista';" data-after=" cambia el nombre"></li>
-
-<li data-before="EXEC sp_rename 'Nombre_Tabla.Nombre_Trigger', 'Nuevo_Nombre_Trigger', 'OBJECT';" data-after=" cambia el nombre"></li>
+<li>ALTER PROCEDURE sp_get_employee_data @emp_id INT AS BEGIN -- Cuerpo del stored procedure modificado END; [modifica el cuerpo del stored procedure]</li>
+<li>CREATE FUNCTION nombre_funcion (@parametro tipo_dato) RETURNS tipo_dato_retorno AS BEGIN -- Cuerpo de la función END; [almacena datos complejos en particular de cálculos optimiza]</li>
+<li>CREATE FUNCTION fn_calcular_salario_anual (@salario_mensual MONEY) RETURNS MONEY AS BEGIN DECLARE @salario_anual MONEY; SET @salario_anual = @salario_mensual * 12; RETURN @salario_anual; END; [almacena datos complejos de cálculo]</li>
+<li>DECLARE @nombre varchar(50) = 'Juan'; DECLARE @edad int = 30; SELECT * FROM tabla_personas WHERE nombre = @nombre AND edad > @edad; [creación de variables en consulta]</li>
+<li>PRINT 'Hola, esta es una consulta básica de impresión de texto'; [imprimir texto]</li>
 
 
 
-<li data-before="ALTER TRIGGER tr_upd_employee
-ON employee
-AFTER UPDATE
-AS
-BEGIN
-  -- Cuerpo del trigger modificado
-END;" data-after=" modifica el cuerpo"></li>
-
-<li data-before="ALTER VIEW v_employee_data
-AS
-SELECT emp_id, emp_name, emp_salary
-FROM employee
-WHERE emp_status = 'active';" data-after=" modifica el cuerpo"></li>
-
-
-
-<li data-before="ALTER PROCEDURE sp_get_employee_data
-  @emp_id INT
-AS
-BEGIN
-  -- Cuerpo del stored procedure modificado
-END;" data-after=" modifica el cuerpo"></li>
-
-
-<li data-before="CREATE FUNCTION nombre_funcion (@parametro tipo_dato)
-RETURNS tipo_dato_retorno
-AS
-BEGIN
-  -- Cuerpo de la función
-END;" data-after=" almacena datos complejo en particular de cálculos optimiza"></li>
-
-
-<li data-before="CREATE FUNCTION fn_calcular_salario_anual (@salario_mensual MONEY)
-RETURNS MONEY
-AS
-BEGIN
-  DECLARE @salario_anual MONEY;
+<li>M 'C:\archivo_ejemplo.csv' WITH ( FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2 ); [volcado de datos de un archivo CSV a una tabla de SQL]</li>
+<li>Select campo1, campo2 from table order by campo1, campo2 desc Offset 50 rows fetch next 50 rows only; [selección de filas específicas]</li>
+<li>SELECT campo1, campo2 FROM tabla ORDER BY campo1, campo2 DESC OFFSET 20 ROWS FETCH NEXT 5 ROWS ONLY; [selección de filas 20 a 25]</li>
+<li>SELECT TOP 10 campo1, campo2 FROM tabla; [selección de las primeras 10 filas]</li>
+<li>MERGE INTO tabla_destino AS T USING tabla_origen AS S ON T.campo1 = S.campo1 WHEN MATCHED THEN UPDATE SET T.campo2 = S.campo2 WHEN NOT MATCHED THEN INSERT (campo1, campo2) VALUES (S.campo1, S.campo2); [operación MERGE para combinar tablas existentes o insertar y actualizar datos]</li>
+<li>SELECT * FROM tabla WHERE fecha = '2023-03-27'; [consulta básica de fecha utilizando comillas alrededor de la fecha]</li>
+<li>SELECT * FROM tabla WHERE fecha BETWEEN '2023-01-01' AND '2023-03-31' ORDER BY fecha ASC; [consulta de fecha más avanzada]</li>
+<li>SELECT YEAR(fecha) AS Año, MONTH(fecha) AS Mes, COUNT(*) AS TotalRegistros FROM tabla WHERE fecha BETWEEN '2022-01-01' AND '2023-12-31' GROUP BY YEAR(fecha), MONTH(fecha) HAVING COUNT(*) > 100 ORDER BY Año ASC, Mes ASC; [consulta de fecha avanzada con agregación y filtrado]</li>
+<li>SELECT TOP 10 C.IDcliente AS ClienteID, C.Nombre AS ClienteNombre, C.Apellido AS ClienteApellido, P.Nombre AS ProveedorNombre, COUNT(*) AS TotalPedidos FROM Cliente AS C INNER JOIN Proveedor AS P ON C.IDcliente = P.IDcliente WHERE C.Nombre LIKE 'A%' AND P.Nombre <> 'Proveedor X' GROUP BY C.IDcliente, C.Nombre, C.Apellido, P.Nombre HAVING COUNT(*) > 5 ORDER BY C.Nombre ASC, P.Nombre DESC; [estructura básica de consulta con múltiples tablas y condiciones]</li>
   
-  SET @salario_anual = @salario_mensual * 12;
+
+
   
-  RETURN @salario_anual;
-END;" data-after=" almacena datos complejo de calculo"></li>
-
-
-<li data-before="DECLARE @nombre varchar(50) = 'Juan';
-DECLARE @edad int = 30;
-SELECT *
-FROM tabla_personas
-WHERE nombre = @nombre AND edad > @edad;" data-after=" creación de variables en consulta"></li>
-
-<li data-before="PRINT 'Hola, esta es una consulta básica de impresión de texto';" data-after=" imprimir  texto"></li>
-
-
-
-
-
-
-
-<li  data-before="BULK INSERT tabla_ejemplo
-FROM 'C:\archivo_ejemplo.csv'
-WITH (
-    FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
-    FIRSTROW = 2
-);" data-after=" volcado de dato de txt a tabla sql"></li>
-
-<li data-before="Select campo1,campo2 from table order by campo1,campo2 desc
-Offset 50 rows fetch next 50 rows only;" data-after=" selección de filas especificas"></li>
-
-<li data-before="SELECT campo1, campo2
-FROM tabla
-ORDER BY campo1, campo2 DESC
-OFFSET 20 ROWS
-FETCH NEXT 5 ROWS ONLY;" data-after=" selección de filas 20 a la 25"></li>
-
-<li data-before="SELECT TOP 10 campo1, campo2
-FROM tabla;" data-after=" selección de filas TOP"></li>
-
-<li data-before="MERGE INTO tabla_destino AS T
-USING tabla_origen AS S
-ON T.campo1 = S.campo1
-WHEN MATCHED THEN
-    UPDATE SET T.campo2 = S.campo2
-WHEN NOT MATCHED THEN
-    INSERT (campo1, campo2) VALUES (S.campo1, S.campo2);" data-after=" Operación merge para combinar tabla existente a una vacía inserta,actualiza,elimina"></li>
-
-<li data-before="SELECT * 
-FROM tabla 
-WHERE fecha = '2023-03-27';" data-after=" consulta fecha basica con comillas las fechas siempre"></li>
-
-
-<li data-before="SELECT * 
-FROM tabla 
-WHERE fecha BETWEEN '2023-01-01' AND '2023-03-31' 
-ORDER BY fecha ASC;" data-after=" consulta fecha media"></li>
-
-
-<li data-before="SELECT YEAR(fecha) AS Año, MONTH(fecha) AS Mes, COUNT(*) AS TotalRegistros
-FROM tabla 
-WHERE fecha BETWEEN '2022-01-01' AND '2023-12-31' 
-GROUP BY YEAR(fecha), MONTH(fecha)
-HAVING COUNT(*) > 100
-ORDER BY Año ASC, Mes ASC;" data-after=" consulta fecha avanzada"></li>
-
-
-
-<li data-before="SELECT TOP 10 C.IDcliente AS ClienteID, C.Nombre AS ClienteNombre, C.Apellido AS ClienteApellido,
-       P.Nombre AS ProveedorNombre, COUNT(*) AS TotalPedidos
-FROM Cliente AS C
-INNER JOIN Proveedor AS P ON C.IDcliente = P.IDcliente
-WHERE C.Nombre LIKE 'A%' AND P.Nombre <> 'Proveedor X'
-GROUP BY C.IDcliente, C.Nombre, C.Apellido, P.Nombre
-HAVING COUNT(*) > 5
-ORDER BY C.Nombre ASC, P.Nombre DESC;" data-after=" básica extrurctura completa"></li> 
-
 </ol> 
 
 
