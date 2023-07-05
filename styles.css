@@ -162,12 +162,7 @@ ol {
   
    
 
-}
 
-#mysql2 li[data-before$=";"]::after {
-  content: attr(data-after);
-  color: red;
-}
 
 /*Esto es de sql la parte no enumerada*/
 
@@ -184,17 +179,10 @@ margin-right:  400x;
 
 
 
-#mysql li::before,
-#mysql li::after {
-  content: "[";
+#mysql li[data-before*="["]:before,
+#mysql li[data-after*="]"]:after {
   font-weight: bold;
 }
-
-#mysql li::after {
-  content: "]";
-}
-
-
 
 
 
