@@ -170,6 +170,7 @@ footer {
 
 <head>
 
+/* Esto es un java que junto a un css mantienen color negrilla a lo dentro del corchetes solo para el id sql */
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
       var listItems = document.querySelectorAll("#mysql li");
@@ -189,9 +190,8 @@ footer {
 </head>
 <body>
   
-
-<ol id="mysql">
-
+  
+<ol id="formato">
 <li data-before="select <all> <*>
 <distinct>
 <top valor[percent ]>
@@ -205,8 +205,10 @@ from <tabla> <as alias>
 <having condicion>
 <order by campo asc|desc>;" data-after=" Orden lógico extrictura"></li>
   
+</ol>
   
-
+<ol id="mysql">
+  
 <li>use nombre_base [basica a la base]</li>
 <li>select * from.dbo.tblClientes [basica de tabla]</li>
 <li>delete from tabla [borrar datos de tabla]</li>
