@@ -141,26 +141,9 @@ ol {
 
 
 
-
-#mysql2 li {
-  font-size: 16px;
-  line-height: 1.5;
-  
-
-
+  #mysql li span {
+  font-weight: bold;
 }
-
-
-#mysql2 li::after {
-  content: "";
-}
-
-#mysql2 li::before {
-  content: attr(data-before);
-  color: black;
-  padding-left: 20px;
-  
-   
 
 
 
@@ -175,13 +158,6 @@ width: 80%;
 text-align: justify;
 margin-right:  400x;
 
-}
-
-
-
-#mysql li[data-before*="["]:before,
-#mysql li[data-after*="]"]:after {
-  font-weight: bold;
 }
 
 
