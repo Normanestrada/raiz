@@ -170,17 +170,21 @@ footer {
 
 <head>
 
- <script>
+<script>
     window.addEventListener('DOMContentLoaded', (event) => {
       var listItems = document.querySelectorAll("#mysql li");
 
       listItems.forEach(function(item) {
-        var text = item.textContent;
-        var newText = text.replace(/\[(.*?)\]/g, '<span class="bold-brackets">$1</span>');
+        var text = item.innerHTML;
+        var newText = text.replace(/\[(.*?)\]/g, '[<span class="bold-brackets">$1</span>]');
         item.innerHTML = newText;
       });
     });
   </script>
+
+
+
+
   
 </head>
 <body>
