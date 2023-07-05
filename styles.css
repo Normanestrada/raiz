@@ -140,31 +140,6 @@ ol {
 /* Es decir una vez termine comillas pero después de un punto y coma se marcará color rojo*/
 
 
-#mysql li {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-#mysql li::after {
-  content: "";
-}
-
-#mysql li::before {
-  content: attr(data-before);
-  color: black;
-  padding-left: 20px;
-  
-
-}
-
-#mysql li[data-before$=";"]::after {
-  content: attr(data-after);
-  color: red;
-}
-
-
-
-
 
 
 #mysql2 li {
@@ -209,17 +184,17 @@ margin-right:  400x;
 
 
 
-
-
-li::before,
-li::after {
+#mysql li::before,
+#mysql li::after {
   content: "[";
   font-weight: bold;
 }
 
-li::after {
+#mysql li::after {
   content: "]";
 }
+
+
 
 
 
